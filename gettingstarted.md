@@ -14,8 +14,8 @@ What you should know:
 * http get/post
 * address structure on the web (URL)
 
-### Javascript skills
-To be able to complete the course you need basic programming skills, preferably in javascript (corresponding to [1dv021](https://github.com/1dv021)). If you have programmed in another language than javascript please, take an hour to go through chapter 1-10 in |http://eloquentjavascript.net/](http://eloquentjavascript.net/). 
+### Javascript
+To be able to complete the course you need basic programming skills, preferably in javascript (corresponding to [1dv021](https://github.com/1dv021)). If you have programmed in another object oriented language than javascript please, take an hour to go through chapter 1-10 in [http://eloquentjavascript.net/](http://eloquentjavascript.net/) to get you up to speed. 
 
 What you should be familial with in javascript:
 * Values, types and operators
@@ -29,7 +29,7 @@ What you should be familial with in javascript:
 * Regular expressions
 
 ### Git/GitHub
-Git and github is mandatory for this course. You will 
+Git and github is mandatory for this course. All of the code you write should at all times be version controlled using git. Code that will be used for examination is mandantory to push to private github repros provided. During the course you will have four repositories to your disposal. Three for exams and one for your own experiments. Those repros are provided through the 1dv022 organization on github. 
 
 What you should know:
 * Creating a new repository using git and placing it on github
@@ -38,14 +38,13 @@ What you should know:
 * Working with the .gitignore-file
 * Adding files and commiting your changes
 * Pushing your commits to github
-* 
 
 ### Basic bash-commands
-During the course you will getting quite familiar with navigating file structures and installing tools using bash-commands in a terminal. Even though you will be guided through all steps in the process it is disadvantage to know the basic commands in bash like:
+During the course you will getting quite familiar with navigating file structures and installing tools using bash-commands in a terminal. Even though you will be guided through all steps in the process it is good to know the basic commands in bash like:
 * ls, cd, mkdir, rm
 * sudo
 
-You will find a good start guide here:
+You will find a good starting guide here:
 
 ### IDE (Integrated Development Environment)
 In this course several tools will be introduced to support a modern workflow. Though you sometimes will be forced to use some tools, the code editor will be your own choice. Demos etc. in the course may be recorded using different editors, however, recommended code editor is webstorm.
