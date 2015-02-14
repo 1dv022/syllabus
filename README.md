@@ -1,2 +1,1 @@
-# syllabus
-All you need to know in order to complete the course
+# 1DV022 - Klientbaserad Webbutveckling, Kursmaterial
