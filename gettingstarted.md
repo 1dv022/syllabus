@@ -8,11 +8,10 @@ To be able to take this course you need some prerequisites. In short (details be
 HTML and CSS is one of the foundations that the web is built upon. In this course basic skills in html and css are required. Further more you are required to have basic knowlege on how communication over http is handled.
 
 What you should know:
-* HTML
-* CSS (selectors, media queries)
-* Protocol and principles for communication between client and server
-* http get/post
-* address structure on the web (URL)
+* HTML (html5-documents and basic elements, node-tree)
+* CSS (selectors, media queries, separation from html)
+* Protocol and principles for communication between client and server (http/https get/post)
+* address structure on the web (URL, relative and absolute paths)
 
 ### Javascript
 To be able to complete the course you need basic programming skills, preferably in javascript (corresponding to [1dv021](https://github.com/1dv021)). If you have programmed in another object oriented language than javascript please, take an hour to go through chapter 1-10 in [http://eloquentjavascript.net/](http://eloquentjavascript.net/) to get you up to speed. 
@@ -46,7 +45,7 @@ During the course you will getting quite familiar with navigating file structure
 
 You will find a good starting guide here:
 
-### IDE (Integrated Development Environment)
+## IDE (Integrated Development Environment)
 In this course several tools will be introduced to support a modern workflow. Though you sometimes will be forced to use some tools, the code editor will be your own choice. Demos etc. in the course may be recorded using different editors, however, recommended code editor is webstorm.
 
 
