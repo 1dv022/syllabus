@@ -35,8 +35,12 @@ What you should know:
 * Cloning an existing repository from github
 * Forking an existing repository from github
 * Working with the .gitignore-file
+* Using git from a bash-terminal
 * Adding files and commiting your changes
 * Pushing your commits to github
+
+How your system should be configured:
+* Git should be installed on your system. 
 
 ### Basic bash-commands
 During the course you will getting quite familiar with navigating file structures and installing tools using bash-commands in a terminal. Even though you will be guided through all steps in the process it is good to know the basic commands in bash like:
