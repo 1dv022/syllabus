@@ -1,7 +1,15 @@
 ## Planning
 
-Week | Readning | To do
------|----------|-------------------------
-1 | p. 143-213 | Start out with Exam assignment 1
-2 | p. 124-234 | Examination 1. Start working on assignments
-3 | p. 154-124 | Work with assignment 1-4. Have a look att exam assignment 2.
+Week | Material | Lectures |To do
+-----|----------|----------|--------------
+1    | p. 143-213 | Introduction<br>Lecture |Start out with Exam assignment 1
+2 | p. 124-234  | Examination 1<br> Start working on laboration 1
+3 | p. 154-124  | Finish lab 1<br>Start working on lab 2<br>Have a look att exam assignment 2.
+4 | | Finish lab 2. Start working on examination 2
+5 | |
+6 | | Examination 2
+7 | |
+8 | | _Christmas week_
+9 | | _New Year week_
+10 | |
+11 | | Examination 3

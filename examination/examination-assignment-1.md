@@ -40,3 +40,4 @@ Publish on gh.io
 During the examination you should be able to:
 * Explain what CSS Processors are and the describe features like variables, mixins, imports.
 * Explain what Static Sites generators are and how you have used it in the assignment.
+* Explain the building blocks of your application
