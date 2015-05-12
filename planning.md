@@ -1,7 +1,10 @@
 
-|v1|v2|v2|v3|v4|v5|v6|v7|v8|v9|v10|v11|
-|--|--|--|--|--|--|--|--|--|--|---|---|
-|fd|dsf|fg|fg|dfg|ff|gh|fgf|gf|fgf|fgf|
+This:
+
+| V1  | v2  | v2  | v3  | v4 | v5  | v6  | v7  | v8  | v9  | v10 | v11 |
+| --- | --- | --- | --- | ---| --- | --- | --- | --- | --- | --- | --- |
+| F: intro | PI | fg | fg | dfg | ff | gh | fgf | gf | fgf | fgf | fdf |
+| fd | dsf | fg | fg | dfg | ff | gh | fgf | gf | fgf | fgf | fdf |
 
 
 # Part 1: Preprocessors and static site generators
@@ -15,8 +18,7 @@
 
 ## Techniques
 * Jekyll
-* Jade?
-* SASS or LESS?
+* SASS or LESS? http://markdotto.com/2014/09/25/sass-and-jekyll/
 * GitHub pages
 * NPM 
 
