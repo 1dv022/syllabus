@@ -3,8 +3,8 @@ Why use a build system?
 The build system will do repetative tasks for us and build our system for production so that we can focus on writing code, not copying and pasting files together. 
 
 In this course we will use a build system for the following tasks:
-* Checking our javascript to avoid errors and bugs (Using JSHint) 
-* Concatinating and modularizing our javascript to make page load faster and avoid  (Using Browserify)
+* Checking our javascript to avoid errors and bugs (Using JSHint and JSCS) 
+* Concatinating and modularizing our javascript to make page load faster and avoid collissions (Using Minify(?) and Browserify)
 * Uglyfing our javascript to make page load faster (minify/compress)
 * Compiling scss to css (Using SASS). Using SASS to write better css faster.
 * Setting up a local web server used to preview.

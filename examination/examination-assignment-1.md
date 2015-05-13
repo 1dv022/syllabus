@@ -12,14 +12,8 @@ This examination is worth 1 credit (1hp) and will test the following objective:
 * vagrant up
 * vagrant ssh, cd /vagrant
 
-#### Scaffolding
-* yo
-* gulp
-* gulp serve
-
 #### Adding Jekyll
-* bower
-* add to gulp
+* jekyll new . --force
 
 #### Static site generation with Jekyll
 

@@ -3,10 +3,10 @@ To be able to take this course you need some prerequisites. In short (details be
 
 * web development using HTML/CSS (corresponding to [1me321](#))
 * object oriented programming in javascript (corresponding to [1dv021](https://coursepress.lnu.se/grundlaggande-programmering/))
-* version control using git and github
+* basic version control using git and github
 
 ### HTML/CSS
-HTML and CSS is one of the foundations that the web is built upon. In this course basic skills in html and css are required. Further more you are required to have basic knowlege on how communication over http is handled.
+HTML and CSS is one of the foundations that the web is built upon. In this course basic skills in html and css are required. Further more are you required to have basic knowlege on how communication over http is handled.
 
 What you should know:
 * HTML (html5-documents and basic elements, node-tree, ...)
@@ -28,13 +28,13 @@ What you should be familial with in javascript:
 * Modules and namespaces
 * Regular expressions
 
-Pay extra attention to javascript-specific details such as:
+Pay extra attention to "javascript-specific" details such as:
 * Prototype based object oriented languages
 * First class functions
 * Closures
 
 ### Git/GitHub
-Git and github is mandatory for this course. All of the code you write should at all times be version controlled using git. Code that will be used for examination is mandantory to push to private github repros provided. During the course you will have four repositories to your disposal. Three for exams and one for your own experiments. Those repros are provided through the [1dv022 organization on github](http://github.com/1dv022). 
+Git and github is mandatory for this course. All of the code you write should at all times be version controlled using git. Code that will be used for examination is mandantory to push to private github repros provided and we recommend doing so with other code as well. During the course you will have four repositories to your disposal. Three for exams and one for your own experiments. Those repros are provided through the [1dv022 organization on github](http://github.com/1dv022) and will be created after you are registred on the course. 
 
 What you should know:
 * Creating a new repository using git and placing it on github
