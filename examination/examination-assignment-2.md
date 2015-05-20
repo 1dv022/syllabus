@@ -1,29 +1,8 @@
+## About the assignment
 
+This examining assignment will focus on asyncronous communication agains external RESTful web services through AJAX. It will also require knowlege of Web storage and security issues in the browser to solve the problem discribed.
 
-### Preperation
-Read the book...
-* Labby message
-* Hello Ajax
-* Web storage
-
-
-#### Vagrant
-* Install Virtual Box
-* Install Vagrant
-* mkdir, clone repro
-* vagrant up
-* vagrant ssh, cd /vagrant
-
-#### Scaffolding
-* gulp
-* gulp serve
-
-
-### The assignment
-
-This examination will focus on asyncronous communication agains external RESTful web services through AJAX. It will also require knowlege of Web storage and security issues in the browser.
-
-The backend (server-side code) of this assignment will be given and the students job is to write the client-side code. 
+The backend (the API) of this assignment will be given and the your job is to write the client-side code. 
 
 ## Goal
 After performing this assignment the students will fullfill the three goals descibed in the course syllabus:
@@ -34,19 +13,12 @@ After performing this assignment the students will fullfill the three goals desc
 
 This examination is worth 3 credit (3hp).
 
-
-###Strict mode
-All javascript-files used in this assigment should use ES5 strict-mode. 
-
-###Notice - replace with link to policy document
-To pass this exam all your code should follow the standard provided by the course leaders. When you check in and release yor code a validation will be performed to check your code. It will validate agains this file:
-LÄNK TILL js-hint
-
-Any attemt to plagiarism or other way of cheating will be reported to the university discipline board
+## Notice 
+Before starting out this assigment check out our assignment policy document at: LÄNK HÄR
 
 
 ## About the assignment
-The student should create an application in which the user can answer, by the server given, quiz-questions. Do the user give the correct answer will the application take the user to the next question. Does the user give the wrong answer should the application give the user an oppertunity to answer again.
+You should create an client application written in vanilla JavaScript in which the user can answer, by the server given, quiz-questions. Do the user give the correct answer will the application take the user to the next question until there are no more questions. Does the user give the wrong answer should the application give the user an opportunity to answer again.
 
 The application should behave as an Single Page Application (SPA).
 
