@@ -1,10 +1,19 @@
 
 This:
 
-| V1  | v2  | v2  | v3  | v4 | v5  | v6  | v7  | v8  | v9  | v10 | v11 |
-| --- | --- | --- | --- | ---| --- | --- | --- | --- | --- | --- | --- |
-| F: intro | PI | fg | fg | dfg | ff | gh | fgf | gf | fgf | fgf | fdf |
-| fd | dsf | fg | fg | dfg | ff | gh | fgf | gf | fgf | fgf | fdf |
+| V1     | v2     | v3     | v4     | v5     | v6     | v7  | v8  | v9  | v10    | v11 |
+| ---    | ---    | ---    | ---    | ---    | ---    | --- | --- | --- | ---    | --- |
+| L01    | L02    | L03    | L04    | L05    | L06    | L07 |     |     |        |     |
+|        |        |        |        | PI1    |        |     | PI2 |     |        |     |
+| T 2x2h | T 2x2h | T 2x2h | T 2x2h | T 2x2h | T 2h   |     |     |     | T 2x2h |     |
+|        |        | DL: Ex1|        |        |        |     |     |     |        |     |
+|        |        |        |        |        | EX2    |     |     |     |        | EX3 |
+
+L - Lecture
+PI - Peer Instruction
+T - Tutoring
+DL - Deadline
+EX- Oral hearing, exam
 
 
 # Part 1: Preprocessors and static site generators
@@ -23,7 +32,7 @@ This:
 * NPM 
 
 ## Learning activites
-1 lecture
+1 lecture (L01)
 
 1 peer-instruction. (repetition)
 
@@ -67,9 +76,9 @@ appropriate data formats 
 
 ## Learning activites
 3 lectures:
-* The browser / Security
-* DOM / Event
-* Ajax / Storage
+* L02 - The browser / Security
+* L03 - DOM / Event (Constr. vs. factory)
+* L04 - Ajax / Storage (Async prog.)
 
 1 Peer-instruction
 
@@ -104,8 +113,9 @@ support and which takes advantage of the browser's native APIs
 
 ## Learning activites
 2 lectures:
-* Offline / SPA
-* Accessibility / Optimization
+* L05 - Offline / SPA
+* L06 - Accessibility / Optimization
+* L07 - APIs / The future
 
 1 Peer-instruction
 
