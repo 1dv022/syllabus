@@ -57,6 +57,7 @@ appropriate data formats 
 
 ## Techniques
 * Vagrant
+* Babel for ES6 features?
 * Tests?
 * AJAX
 * DOM
