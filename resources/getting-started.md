@@ -5,10 +5,11 @@ To get started with exercises and exam assignments in this course you should fol
 2. Versioncontrol using Git
 
 3. Virtulization
+
 Please read up on what virtulization is and how we will use it in the course. [Resources/Virtulization](https://coursepress.lnu.se/kurs/klientbaserad-webbprogrammering/resources/virtualization/)
 You should:
-* Install [Virtual Box](https://www.virtualbox.org/)
-* Install [Vagrant](https://www.vagrantup.com/)
+  * Install [Virtual Box](https://www.virtualbox.org/)
+  * Install [Vagrant](https://www.vagrantup.com/)
 
 
 
