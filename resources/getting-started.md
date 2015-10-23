@@ -11,6 +11,7 @@ You should:
 * Install [Virtual Box](https://www.virtualbox.org/)
 * Install [Vagrant](https://www.vagrantup.com/)
 
-##4. IDE
+##4. IDE (Integrated Development Environment)
+In this course several tools will be introduced to support a modern workflow. Though you sometimes will be forced to use some tools, the code editor will be your own choice. Demos etc. in the course may be recorded using different editors, however, recommended code editor is webstorm.
 
 ##5. GitHub and GitHub pages
