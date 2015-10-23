@@ -44,7 +44,7 @@ No index?
 Push to GH
 Publish on gh.io
 
-## The examination
+## The oral hearing
 During the examination you should be able to:
 * Explain what CSS Processors are and the describe features like variables, mixins, imports.
 * Explain what Static Sites generators are and how you have used it in the assignment.
