@@ -37,10 +37,11 @@ EX- Oral hearing, exam
 1 peer-instruction. (repetition)
 
 Tutorials for:
-* CSS Preprocessors
-* SSG
+* CSS Preprocessors (SASS)
+* SSG (Jekyll)
 * GH-pages
-* NPM
+* NPM - automation
+* Livereload
 
 ## Examination
 Practical examination task and follow up oral hearing.
