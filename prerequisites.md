@@ -34,7 +34,7 @@ Pay extra attention to "javascript-specific" details such as:
 * Closures
 
 ### Git/GitHub
-Git and github is mandatory for this course. All of the code you write should at all times be version controlled using git. Code that will be used for examination is mandantory to push to private github repros provided and we recommend doing so with other code as well. During the course you will have four repositories to your disposal. Three for exams and one for your own experiments. Those repros are provided through the [1dv022 organization on github](http://github.com/1dv022) and will be created after you are registred on the course. 
+Git and github is mandatory for this course. All of the code you write should at all times be version controlled using git. Code that will be used for examination is mandantory to push to private github repros provided and we recommend doing so with other code as well. During the course you will have four repositories to your disposal. Three for exams and one for your own experiments. Those repros are provided through the [1dv022 organization on github](http://github.com/1dv022) and will be created after you are registred on the course and your "Profile information" is filled in. 
 
 What you should know:
 * Creating a new repository using git and placing it on github
