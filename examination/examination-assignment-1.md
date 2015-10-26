@@ -43,14 +43,14 @@ No index?
 ### Finishing up
 When you feeling ready with your site it's time to publish it on [GitHub Pages](https://pages.github.com/). GitHub Pages uses jekyll by default so we can push the jekyll-files. **OBS! The site you will publish is going to be public.** Do the following.
 
-1. Create a [new empty public GitHub repositorie](https://github.com/new) and name it in the form your-github-username.github.io
+1. Create a [new empty public GitHub repositorie](https://github.com/new) and name it in the form `<YOUR GITHUB USERNAME>.github.io`
 2. In your examination-repo add a new remote named "gh-pages" that points to your newly created github.io-repo run:
 ```git remote add gh-pages https://github.com/username/username.github.io```
 3. Check that you now have two remotes, one (origin) that points to your examination-repo and one (gh-pages) that points to your own github.io-repo run: 
 ```git remote -v```
 4. To push your site in a correct way we need to push just our src-directory (the place where the jekyll-site is) and not the whole examination-repo (will include vagrant-files and other stuff) we have to use the "git subtree"-command run: 
 ```git subtree push --prefix src  gh-pages master --squash```
-5. Check your github.io-repo and use your browser to watch your site on: your-github-username.github.io
+5. Check your github.io-repo and use your browser to watch your site on: `https://<YOUR GITHUB USERNAME>.github.io`
 
 ## The oral hearing
 During the examination you should be able to:
