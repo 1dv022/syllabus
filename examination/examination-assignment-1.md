@@ -25,7 +25,7 @@ Make sure you have followed the "Getting started guide". If so you should alread
 You should now be up and running. Remember to do a commit after every isolated feature/bug/addition/etc.
 
 ### The assignment
-In this assignment you are supposed to produce a web site that will be the front for your published assignments in this course and possibly in courses to come. The sourcecode togehter with vagrant files etc. will be version controlled using git and pushed to the private `<YOUR USERNAME>-examination-1`-repo in 1dv022. However, the published site will be made public using your github-account.
+In this assignment you are supposed to produce a web site that will be the front for your published assignments in this course and possibly in courses to come. The sourcecode togehter with vagrant files etc. will be version controlled using git and pushed to the private `<YOUR USERNAME>-examination-1`-repo in 1dv022. However, the published site will be made **public** using your github-account and [github-pages](https://pages.github.com/).
 
 Requirements:
 * Well designed
