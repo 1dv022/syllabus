@@ -12,8 +12,8 @@ For this course we will be using a system called Vagrant. vagrant is a technique
 ## Installation
 Installing Vagrant is quite straight forward. Because vagrant need a [Hypervisor](https://en.wikipedia.org/wiki/Hypervisor) to function we also need to install one, in this case we will go with VirtualBox. If you already have another service like VMWare installed, please consult the Vagrant documentation to find out how to setup Vagrant without using VirtualBox.
 
-1) Install [VirtualBox](https://www.virtualbox.org/wiki/Downloads) for your operating system
-2) Install [Vagrant](https://www.vagrantup.com/downloads.html)
+1. Install [VirtualBox](https://www.virtualbox.org/wiki/Downloads) for your operating system
+2. Install [Vagrant](https://www.vagrantup.com/downloads.html)
 
 The installation of these two applications should be pretty forward.
 
