@@ -1,0 +1,7 @@
+  $width: 960px;
+                            .container { width: 100%; }
+
+                            aside[role="complimentary"] {
+                              float: right;
+                              width: 300px / $width * 100%;
+                            }

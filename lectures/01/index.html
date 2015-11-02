@@ -1,0 +1,628 @@
+﻿<!doctype html>
+<html lang="sv-se">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>01 - Lecture - Client-based web programming (1DV022)</title>
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <link rel="icon" href="../images/favicon.png" type="image/png" />
+
+    <link rel="stylesheet" href="../reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="../reveal.js/css/theme/black.css" id="theme">
+    <link rel="stylesheet" href="../reveal.js/css/theme/black.lnu.css" id="theme">
+
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="../reveal.js/lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div class="reveal lnu">
+
+        <!-- Any section element inside of this container is displayed as a slide -->
+        <div class="slides">
+            <!-- Start -->
+            <section class="center" data-state="lnu-intro">
+                <h3>Client-based Web Programming</h3>
+                <h3>(1DV022)</h3>
+                <h1>Lecture 01</h1>
+                <div class="lnu-footer">
+                    <img src="../images/lnu-logotype.png" />
+                    <img src="../images/lnu-symbol.png" />
+                </div>
+            </section>
+
+            <!-- CC -->
+            <section data-state="lnu-cc">
+                <h2>Licence for this work</h2>
+                <p>
+                    This work is produced by Johan Leitet for the course Client-based Web Programming (1DV022) at Linnaeus University.
+                </p>
+                <p>All content in this work excluding photographs, icons, picture of course litterature and Linnaeus University logotype and symbol, is licensied under a 
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a><br />Creative Commons Attribution 4.0 International License</a>.</p>
+                <h4>You are free to </h4>
+                <ul>
+                    <li>copy and redistribute the material in any medium or format</li>
+                    <li>spread the whole or parts of the content</li>
+                    <li>show the whole or parts of the content publicly and digital</li>
+                    <li>convert the content to another format</li>
+                    <li>change the content</li>
+                </ul>
+                <p>
+                    If you change the content do not use the photographs, icons, picture of the course literature or Linnaeus University logotype and symbol in your new work!
+                </p>
+                <p>
+                    At all times you must give credit to: ”Linnaeus university – Client-based Web Programming (1DV022)” with the link https://coursepress.lnu.se/kurs/klientbaserad-webbprogrammering/ and to the Creative Common-license above.
+                </p>
+            </section>
+
+            <!-- CSS Preprocessors -->
+            
+                <!-- What is? -->
+                <section>
+                    <h2>CSS Preprocessors</h2>
+                    A CSS Preprocessor is a set of rules<br>
+                    that lets you extend the css-language<br> 
+                    with some usable parts. The extended <br>
+                    css is transformed to regular css using <br>
+                    the preprocessor.
+                </section>
+
+                <!-- Why? -->
+                <section data-markdown>
+                    <script type="text/template">
+                        ## Why use CSS Preprocessors?
+                        * Less css to maintain
+                        * DRY css
+                        * Make calculations in your css
+                        * Better organized css
+                         * Nesting
+                         * Separate in files
+                         * Use mixins
+                        * Use variables!
+                    
+                    </script>
+                    <pre><code></code></pre> 
+                </section>
+                <!-- Which? -->
+                <section data-markdown>
+                    <script type="text/template">
+                        ## Which?
+
+                        * [sass](http://sass-lang.com)
+                        * [less](http://lesscss.org)
+                        * [stylus](https://learnboost.github.io/stylus/)
+
+                        <br><br>
+                        * We will default to sass in this course,<br> 
+                        but you are free to choose another <br>preprocessor if you like. 
+
+                    
+                    </script>
+                    
+                </section>
+                <!-- Common features -->
+                <section>
+                    <!-- Variables -->
+                   <section data-markdown>
+                        <script type="text/template">
+                            ## Features of most CSS Preprocessors
+
+                            * Variables
+                            * Nestning
+                            * Mixins
+                            * Partials
+                            * @import
+                            * Operators
+                            * ...
+                                               
+                        </script>
+                    </section>
+
+                    <!-- Variables -->
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## Variables
+                            
+                            * How about not needing to repeat the same value over and over again?
+
+                            <p class="lnu source">scss:</p>
+
+                            ```scss 
+                                $font-stack:    Helvetica, sans-serif;
+                                $primary-color: #333;
+
+                                body {
+                                  font: 100% $font-stack;
+                                  color: $primary-color;
+                                }
+                            ```    
+
+                            <p class="lnu source">css:</p>
+
+                            ```css 
+                                body {
+                                  font: 100% Helvetica, sans-serif;
+                                  color: #333; 
+                              }
+                            ```     
+                            <p class="lnu source">http://sass-lang.com/guide</p>
+                            
+                        </script>
+                    </section>
+
+                    <!-- Nesting -->
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## Nesting
+                            
+                            * Nest your css selectors in the same manner as your html
+
+                            <p class="lnu source">scss:</p>
+
+                            ```scss 
+                                nav { 
+                                    ul { margin: 0; padding: 0; list-style: none; }
+
+                                    li { display: inline-block; }
+
+                                    a { display: block; 
+                                        padding: 6px 12px; 
+                                        text-decoration: none;
+                                    } 
+                                }
+                            ```   
+                            
+                            <p class="lnu source">css:</p>
+                            
+                            ```scss 
+                                nav ul { margin: 0; padding: 0; list-style: none; }
+                                nav li { display: inline-block; }
+                                nav a { display: block; 
+                                        padding: 6px 12px; text-decoration: none; }
+                            ```     
+                            <p class="lnu source">http://sass-lang.com/guide</p>
+                            
+                        </script>
+                    </section>
+
+                    <!-- Mixins -->
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## Mixins
+                            
+                            * DRY css
+
+                            <p class="lnu source">scss:</p>
+
+                            ```scss 
+                                @mixin border-radius($radius) { 
+                                    -webkit-border-radius: $radius; 
+                                    -moz-border-radius: $radius; 
+                                    -ms-border-radius: $radius; 
+                                    border-radius: $radius; 
+                                }
+
+                                .box { @include border-radius(10px); }
+                            ```   
+                            
+                            <p class="lnu source">css:</p>
+                            
+                            ```css 
+                                .box {
+                                  -webkit-border-radius: 10px;
+                                  -moz-border-radius: 10px;
+                                  -ms-border-radius: 10px;
+                                  border-radius: 10px; 
+                                }
+                            ```     
+                            <p class="lnu source">http://sass-lang.com/guide</p>
+                            
+                        </script>
+                    </section>
+
+                    <!-- Partials and @import -->
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## Partials and @import
+                            
+                            * Minimize http calls
+
+                            <p class="lnu source">scss:</p>
+
+                            ```scss 
+                                @import "css-file.css";
+                                @import "_reset";
+                                @import "mobile";
+
+                            ```   
+                            
+                            <p class="lnu source">css:</p>
+                            
+                            ```css 
+                                @import url(css-file.css);
+                                
+                                body { margin: 0; }
+
+                                div { width: 100%; }
+                            ```     
+                            <p class="lnu source">http://sass-lang.com/guide</p>
+                            
+                        </script>
+                    </section>
+
+                    <!-- Operators -->
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## Operators
+                            
+                            * Calculations in your css (+ * / %)
+
+                            <p class="lnu source">scss:</p>
+
+                            ```scss 
+                               $width: 960px;
+                                .container { width: 100%; }
+
+                                aside[role="complimentary"] {
+                                  float: right;
+                                  width: 300px / $width * 100%;
+                                }
+
+                            ```   
+                            
+                            <p class="lnu source">css:</p>
+                            
+                            ```css 
+                               .container { width: 100%; }
+
+                                aside[role="complimentary"] {
+                                  float: right;
+                                  width: 31.25%; 
+                              }
+                            ```     
+                            <p class="lnu source">http://sass-lang.com/guide</p>
+                            
+                        </script>
+                    </section>
+                </section>
+                <!-- Disadvantages -->
+                <section>
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## Disadvantages?
+
+                            * Harder to debug your code
+                             * Line numbers in browser !== line numbers in source
+                            * Greater complexity
+                             * More tools
+                             * More setup
+                            * Building times increase
+                            * Save generated files in souce control? 
+
+
+
+                             <p class="lnu source">Källa:<br>http://adamsilver.io/articles/the-disadvantages-of-css-preprocessors/</p>
+                        </script>
+                    </section>
+
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## Source maps, enable debuging
+
+                            * When building a sass-project you get a .map-file
+                            <p class="lnu source">main.css.map</p>
+                            ```json
+                                {
+                                "version": 3,
+                                "mappings": "AAAA,IAAK;EAAE,MAAM,EAAE,CAAC;;ACAhB,GAAI;EACH,KAAK,EAAE,IAAI",
+                                "sources": ["_reset.scss","mobile.scss"],
+                                "names": [],
+                                "file": "main.css"
+                                }
+                            ```
+                            * And a source-map comment in your css-file:
+                            
+                            ```css
+                                ... css code here ...
+
+                                /*# sourceMappingURL=main.css.map */
+                            ```
+
+                            * This will enable scss line debugging in the browser 
+                             * FF, Chrome, Safari, Edge
+
+                        </script>
+                    </section>
+                </section> 
+                <!-- How -->    
+            </section>
+
+            <!-- Static site generators -->
+                <!-- What is? -->
+                
+
+                <section data-markdown>
+                    <script type="text/template">
+                        ## Static Site Generators
+                        Takes templates, text, html as input and produces a static html site
+                    </script>
+
+                    <img id="gear2" style="border:0; background:none; transform: translate3d(71.63px, 119.67px, 0px) rotate(-40deg);" src="../images/gear2.svg" alt="gear">
+                   <img id="gear1" style="border:0; background:none; transform: translate3d(71.63px, 119.67px, 0px) rotate(-40deg);" src="../images/gear1.svg" alt="gear">
+                   
+                   <script>
+                        var deg2 = 0;
+                        var gear2 = document.getElementById("gear2");
+                        document.getE
+                        setInterval(function(){
+                            deg2 += 0.1;
+                            gear2.style.transform = "rotate("+deg2+"deg)";
+
+                        }, 100);
+                        var deg1 = 0;
+                        var gear1 = document.getElementById("gear1");
+                        document.getE
+                        setInterval(function(){
+                            deg1 -= 0.1;
+                            gear1.style.transform = "rotate("+deg1+"deg)";
+
+                        }, 100)
+                   </script>
+                </section>
+                <!-- Why? -->
+                <section data-markdown>
+                    <script type="text/template">
+                        ## Why use staic site generators?
+                        * Performance
+                        * Version controlled content
+                        * Security
+                         * No updates required
+                         * No databases
+                        * Only a simple web server needed
+                        * Traffic
+                         * Scale
+                         * Cache
+
+                        <p class="lnu source">http://davidwalsh.name/introduction-static-site-generators</p>
+
+                    
+                    </script>
+                </section>
+                <!-- Which? -->
+                <section data-markdown>
+                    <script type="text/template">
+                        ## Which?
+
+                        * [Jekyll](https://jekyllrb.com/)
+                         * Used in this course
+                        * [Octopress](http://octopress.org/)
+                        * [GitBook](https://www.gitbook.com/)
+                        * [Middleman](https://middlemanapp.com/)
+                        * [Hugo](https://gohugo.io/)
+                        * [...](https://www.staticgen.com/)
+
+
+
+                        <br><br>
+                        * We will use [Jekyll](https://jekyllrb.com/) in this course hosting the site on [github-pages](https://pages.github.com/).
+
+                    
+                    </script>
+                </section>
+
+                <!-- Common features -->
+                <section>
+                   <section data-markdown>
+                        <script type="text/template">
+                            ## Features of most SSGs
+
+                            * Partials/includes
+                             * header.html, footer.html...
+                            * Layouts
+                            * Templates
+                             * Liquid for Jekyll
+                            * Markdown (md) support
+                            * ...
+                                               
+                        </script>
+                    </section>
+                    <!-- Partials/includes -->
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## Partials/includes
+                            
+                            <p class="lnu source">default.html</p>
+
+                            ```html 
+                                <!DOCTYPE html>
+                                <html>
+                                  {% include head.html %}
+                                  <body>
+                                    {% include header.html %}
+                                    <div class="page-content">
+                                      ....
+                                    </div>
+                                    {% include footer.html %}
+                                  </body>
+                                </html>
+                            ``` 
+                            * In Jekyll:
+                             * Partials in folder "_includes"
+
+                        </script>
+                    </section>
+                    <!-- Templates -->
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## Templates
+                            
+                            * Simple markdown language often converted to HTML
+                            <p class="lnu source">blogpage.html:</p>
+
+                            ```html 
+                                <ul>
+                                  {% for post in site.posts %}
+                                    <li>
+                                      <a href="{{ post.url }}">{{ post.title }}</a>
+                                    </li>
+                                  {% endfor %}
+                                </ul>
+                            ``` 
+                            * In Jekyll:
+                             * Liquid is the templating engine
+                        </script>
+                    </section>
+                    <!-- Markdown -->
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## Markdown (.md)
+                            
+                            * Simple markdown language often converted to HTML
+                            <p class="lnu source">.md:</p>
+
+                            ```markdown 
+                                ##Header 2
+                                This is a normal paragraph. 
+                                ###Header 3
+                                1. This
+                                2. list is
+                                 * nested
+                                3. and ordered
+                            ``` 
+                            <p class="lnu source">html</p>
+
+                            ```html 
+                                <h2>Header 2</h2>
+                                <p>This is a normal paragraph.</p>
+                                <h3>Header 3</h3>
+                                <ol>
+                                    <li>This</li>
+                                    <li>list is
+                                        <ul><li>nested</li></ul>
+                                    </li>
+                                    <li>and ordered</li>
+                                </ol>
+ 
+                            ```                             
+                            
+                        </script>
+                    </section>
+                </section>
+                <!-- Disadvantages --> 
+                <!-- Disadvantages -->
+
+                <section data-markdown>
+                    <script type="text/template">
+                        ## Disadvantages?
+
+                        * Only static content
+                          * No realtime content
+                          * No user input
+                          * no admin UI
+                        * More complexity
+                          * compared to static html
+                        * Tools needed to build 
+                          * or hosting supporting the ssg
+
+
+
+                    </script>
+                </section>
+
+                <!-- How -->    
+                <section data-markdown>
+                    <script type="text/template">
+                        ## Getting started:
+
+                        * Install Jekyll
+                          * Requires Ruby, RubyGems, [Linux || Unix || OSX], NodeJS 
+                        * Create a new site
+                          * `~ $ jekyll new myblog
+                        * Edit the site
+                        * build the site
+                         * cd myblog
+                         * ~/myblog $ jekyll serve
+                        * Testa resultatet
+                         * http://localhost:4000 
+
+
+
+                    </script>
+                </section>
+                <!-- Assignment #1 -->
+                <section data-markdown>
+                    <script type="text/template">
+                        ## The first assignment in the course:
+
+                        * Create a static site using Jekyll and sass
+                          * Req 1
+                          * Req 2
+                          * Req 3
+                        * We will use [Vagrant](https://www.vagrantup.com/)
+                          * Easy set up
+                          * Easy to run different projects
+                          * "No" polution of our computer 
+
+                        
+                        https://github.com/1dv022/jekyll-boilerplate
+                        
+
+                    </script>
+                </section>
+           
+
+        </div>
+    </div>
+
+    <script src="../reveal.js/lib/js/head.min.js"></script>
+    <script src="../reveal.js/js/reveal.js"></script>
+
+    <script>
+        // Full list of configuration options available at:
+        // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            width: 1280,
+            height: 800,
+            controls: true,
+            progress: true,
+            history: true,
+            center: false,
+
+            transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+            // Optional reveal.js plugins
+            dependencies: [
+                { src: '../reveal.js/lib/js/classList.js', condition: function () { return !document.body.classList; } },
+                { src: '../reveal.js/plugin/markdown/marked.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+                { src: '../reveal.js/plugin/markdown/markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+                { src: '../reveal.js/plugin/highlight/highlight.js', async: true, condition: function () { return !!document.querySelector('pre code'); }, callback: function () { hljs.initHighlightingOnLoad(); } },
+                { src: '../reveal.js/plugin/zoom-js/zoom.js', async: true },
+                { src: '../reveal.js/plugin/notes/notes.js', async: true }
+            ]
+        });
+
+    </script>
+
+</body>
+</html>

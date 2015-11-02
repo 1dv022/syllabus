@@ -1,0 +1,360 @@
+﻿<!doctype html>
+<html lang="sv-se">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>00 - Introduction - Client-based programming (1DV022)</title>
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <link rel="icon" href="../images/favicon.png" type="image/png" />
+
+    <link rel="stylesheet" href="../reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="../reveal.js/css/theme/black.css" id="theme">
+    <link rel="stylesheet" href="../reveal.js/css/theme/black.lnu.css" id="theme">
+
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="../reveal.js/lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+    <div class="reveal lnu">
+
+        <!-- Any section element inside of this container is displayed as a slide -->
+        <div class="slides">
+            <!-- Start -->
+            <section class="center" data-state="lnu-intro">
+                <h3>Client-based Web Programming</h3>
+                <h3>(1DV022)</h3>
+                <h1>Introduction</h1>
+                <div class="lnu-footer">
+                    <img src="../images/lnu-logotype.png" />
+                    <img src="../images/lnu-symbol.png" />
+                </div>
+            </section>
+
+            <!-- CC -->
+            <section data-state="lnu-cc">
+                <h2>Licence for this work</h2>
+                <p>
+                    This work is produced by Johan Leitet for the course Client-based Web Programming (1DV022) at Linnaeus University.
+                </p>
+                <p>All content in this work excluding photographs, icons, picture of course litterature and Linnaeus University logotype and symbol, is licensied under a 
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a><br />Creative Commons Attribution 4.0 International License</a>.</p>
+                <h4>You are free to </h4>
+                <ul>
+                    <li>copy and redistribute the material in any medium or format</li>
+                    <li>spread the whole or parts of the content</li>
+                    <li>show the whole or parts of the content publicly and digital</li>
+                    <li>convert the content to another format</li>
+                    <li>change the content</li>
+                </ul>
+                <p>
+                    If you change the content do not use the photographs, icons, picture of the course literature or Linnaeus University logotype and symbol in your new work!
+                </p>
+                <p>
+                    At all times you must give credit to: ”Linnaeus university – Client-based Web Programming (1DV022)” with the link https://coursepress.lnu.se/kurs/klientbaserad-webbprogrammering/ and to the Creative Common-license above.
+                </p>
+            </section>
+
+            <!-- Course management -->
+           <section>
+                <section>
+                    <h2>Course management</h2>
+                    <dl class="table">
+                        <dt class="table-cell">
+                            <img class="grayscale" src="http://www.gravatar.com/avatar/f0792a7226128e723ae2a45450e4da5c.jpg?s=80" alt="Johan">
+                        </dt>
+                        <dd class="table-cell">Johan Leitet (Course manager)</dd>
+                    </dl>
+                      <dl class="table">
+                        <dt class="table-cell">
+                            <img class="grayscale" src="http://www.gravatar.com/avatar/2261038623688f4d83dc10c53b85efb8.jpg?s=80" alt="John">
+                        </dt>
+                        <dd class="table-cell">John Häggerud (Course manager)</dd>
+                    </dl>
+                    <dl class="table">
+                        <dt class="table-cell">
+                            <img class="grayscale" src="http://www.gravatar.com/avatar/a334470b8e87eb204a337c228f940e13.jpg?s=80" alt="Mats">
+                        </dt>
+                        <dd class="table-cell">Mats Loock (Course instructor)</dd>
+                    </dl>
+                    
+                    <dl class="table">
+                        <dt class="table-cell">
+                            <img class="grayscale" src="http://www.gravatar.com/avatar/b47109ad8c128221c9dd060d15c89cc9.jpg?s=80" alt="Jacob">
+                        </dt>
+                        <dd class="table-cell">Jacob Lindehoff (Course instructor)</dd>
+                    </dl>
+                  
+                </section>
+                
+            </section>
+
+            <section>
+                <!-- Syllabus -->
+                <section data-markdown>
+                        <script type="text/template">
+                            ## Syllabus
+
+                            * Main field of study
+                             * Computer Science (dv)
+                            * Progression
+                             * G1F
+                            * Prerequisites
+                              * "Introduction to Programming (1DV021)" or equivalent and <br>"Web technology 1 (1ME321)" or equivalent
+
+
+                            http://kursplan.lnu.se/kursplaner/kursplan-1DV022-1.pdf
+                        </script>
+                </section>
+
+                <!-- Goals -->
+                <section data-markdown>
+                        <script type="text/template">
+                            ## After the course you should be able to...
+                            
+                            * ...work with CSS preprocessors and static site generators.
+                            * ...describe a web browsers different internal components and their interactions including browser security mechanisms.
+                            * ... create web applications were JavaScript HTML and CSS have clear roles and are clearly separated.
+                            * ... store and with asynchronous communication, transfer data with for the task appropriate data formats.
+                            * ... create optimized and accessible custom single page applications with offline support and which takes advantage of the browsers native APIs.
+                        </script>
+                </section>
+            </section>
+
+            
+            <section data-markdown>
+                    <script type="text/template">
+                        ## Approach
+
+                        * The course is devided into three parts
+                          * Part 1: SSGs and CSS Preprocessors
+                          * Part 2: DOM, Ajax and storage
+                          * Part 3: SPA (Single page applications)
+                        * Scheduled activities
+                          * 7 Lectures (Monday 13.15)
+                          * 2 Peer Instructions (part 2 and 3)
+                          * 2x2h/week tutoring
+                          * 3 examination assignments
+                          * 1 written examination (part 1)
+                          * 2 oral hearings (part 2 and 3)
+                    </script>
+            </section>
+
+            <!-- Part 1 -->
+            <section data-markdown>
+                <script type="text/template">
+                ## Part 1
+                Static site generators and CSS preprocessors
+
+                Goals:
+                * Work with CSS preprocessors and static site generators.
+                    * CSS Preprocessors
+                    * Static site generators
+
+                Todo:
+                * 1 (ish) lecture
+                * 1 examination assignment (written examination)
+                * Tutoring
+
+                </script>
+            </section>
+            
+            <!-- Part 2 -->
+            <section>
+                <section data-markdown>
+                    <script type="text/template">
+                    ## Part 2
+                    DOM, Ajax and storage
+
+                    Goals:
+                    * Describe a web browsers different internal components and their interactions including browser security mechanisms.
+                      * The web browser (internal structure, security models, developer tools)     
+
+
+                    </script>
+                </section>
+
+                <section data-markdown>
+                    <script type="text/template">
+                    ## Part 2
+                    DOM, Ajax and storage
+
+                    Goals:   
+                    * Create web applications were JavaScript HTML and CSS have clear roles and are clearly separated.
+                      * JavaScript in relation to CSS and HTML
+                      * DOM (traversing, selecting, manipulating)
+                      * Handling events in the browser
+
+                    </script>
+                </section>
+
+                <section data-markdown>
+                    <script type="text/template">
+                    ## Part 2
+                    DOM, Ajax and storage
+
+                    Goals:   
+                    * Store and with asynchronous communication, transfer data with for the task appropriate data formats.
+                      * Asynchronous communication (incl. Ajax)
+                      * Data transfer formats (incl. JSON)
+                    
+
+                    </script>
+                </section>
+                <section data-markdown>
+                    <script type="text/template">
+                    ## Part 2
+                    DOM, Ajax and storage
+
+                    Todo:   
+                    * 3 lectures
+                    * 1 Peer Instruction
+                    * 1 examination assignment
+                    * 1 oral hearing
+                    * Tutoring
+                    
+
+                    </script>
+                </section>
+            </section>
+
+            <!-- Part 3 -->
+            <section>
+                <section data-markdown>
+                    <script type="text/template">
+                    ## Part 3
+                    SPA (Single page applications)
+
+                    Goals:
+                    * create optimized and accessible custom single page applications with offline support and which takes advantage of the browsers native APIs.
+                      * Offline web applications
+                      * Single Page Applications (SPA)
+                      * Optimization of client-based web applications
+                      * An orientation about accessibility in web applications
+                      * Handling history in the browser
+                      * Overview of the browser APIs and practical use of selected APIs
+
+
+                    </script>
+                </section>
+                <section data-markdown>
+                    <script type="text/template">
+                    ## Part 3
+                    SPA (Single page applications)
+
+                    Todo:
+                    * 3 lectures
+                    * 1 Peer Instruction
+                    * 1 examination assignment
+                    * 1 oral hearing
+                    * Tutoring
+
+                    </script>
+                </section>
+            </section>
+
+            <!-- Tools -->
+            <section data-markdown>
+                <script type="text/template">
+                ## Litterature
+
+                * Eloquent JavaScript, 2nd Edition av Marijn Haverbake
+                  * Mandatory
+                  * ISBN 978-1593275846
+                  * http://eloquentjavascript.net/
+                  * Chapter 12-19, 22
+                * Professional JavaScript for Web Developers, 3nd Edition by Nicholas Zakas
+                  * Optional
+                  * ISBN 978-1118026694
+
+                    
+                </script>
+            </section>
+
+
+            <!-- Tools -->
+            <section data-markdown>
+                <script type="text/template">
+                    ## Tools to be used...
+                    * Installed on your computers os...
+                      * [Git](https://git-scm.com/)
+                      * [JetBrains WebStorm 10](https://www.jetbrains.com/webstorm/)
+                      * [Virtual Box](https://www.virtualbox.org/)
+                      * [Vagrant](https://www.vagrantup.com/)
+                    * Installed in vagrant...
+                      * Node.js (>= 4.0), npm
+                      * Jekyll
+                      * Sass
+                      * JSCS, JSHint
+                      * ... many, many more...
+
+                </script>
+            </section>
+
+            <!-- Tools -->
+            <section data-markdown>
+                <script type="text/template">
+                    ## Course webpage
+                    https://coursepress.lnu.se/kurs/klientbaserad-webbprogrammering/
+                    * Everything static + news
+                    * Slack: Discussions and questions [#1dv022-klientutv](https://coursepress.slack.com/messages/1dv022-klientutv/)
+                    * 1dv022@lnu.se (Private mattyers only!)
+
+                </script>
+            </section>
+
+
+        </div>
+    </div>
+
+    <script src="../reveal.js/lib/js/head.min.js"></script>
+    <script src="../reveal.js/js/reveal.js"></script>
+
+    <script>
+        // Full list of configuration options available at:
+        // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            width: 1280,
+            height: 800,
+            controls: true,
+            progress: true,
+            history: true,
+            center: false,
+
+            transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+            // Optional reveal.js plugins
+            dependencies: [
+                { src: '../reveal.js/lib/js/classList.js', condition: function () { return !document.body.classList; } },
+                { src: '../reveal.js/plugin/markdown/marked.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+                { src: '../reveal.js/plugin/markdown/markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+                { src: '../reveal.js/plugin/highlight/highlight.js', async: true, condition: function () { return !!document.querySelector('pre code'); }, callback: function () { hljs.initHighlightingOnLoad(); } },
+                { src: '../reveal.js/plugin/zoom-js/zoom.js', async: true },
+                { src: '../reveal.js/plugin/notes/notes.js', async: true }
+            ]
+        });
+
+    </script>
+
+</body>
+</html>
