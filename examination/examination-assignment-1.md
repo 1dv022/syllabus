@@ -20,6 +20,8 @@ Make sure you have followed the "Getting started guide". If so you should alread
 
 ### Installing Jekyll and tools using vagrant
 
+* [Recorded demo [Swedish]](https://youtu.be/KT8y18TMmFE)
+
 1. `git clone` your private repo named `<YOUR USERNAME>-examination-1` found in [Github/1dv022](http://github.com/1dv022) into a suitable folder on your computer.
 2. `cd <YOUR USERNAME>-examination-1`into the folder
 3. `git pull https://github.com/1dv022/jekyll-boilerplate.git` to get a vagrant template for your jekyll project. (This step is optional. If you want, you can create your own vagrant build from scratch. Note that the instructions in this document no longer will apply if you do, you are on your own.)
