@@ -3,6 +3,10 @@ This examination is worth 1 credit (1hp) and will test the following objective:
 
 ## Practical assignment
 
+### Deadline and submission
+Deadline: 18/11 12.00
+Submit: Submit your assignment by doing a release on GitHub named "v1.0". In case of changes after a released version please use incremental version numbers, i.e. "v1.1", "v1.22 etc.
+
 ### Preparation
 
 Make sure you have followed the "Getting started guide". If so you should already have...
@@ -82,8 +86,3 @@ When you feeling ready with your site it's time to publish it on [GitHub Pages](
 ```git subtree push --prefix src  gh-pages master --squash```
 5. Check your github.io-repo and use your browser to watch your site on: `https://<YOUR GITHUB USERNAME>.github.io`
 
-## The oral hearing
-During the examination you should be able to:
-* Explain what CSS Processors are and the describe features like variables, mixins, imports.
-* Explain what Static Sites generators are and how you have used it in the assignment.
-* Explain the building blocks of your application
