@@ -75,6 +75,9 @@ the following:
 * What is Open Graph and how do you make use of it?
 
 ### Finishing up
+
+* [Recorded demo [Swedish]](https://youtu.be/rV9VrCMOzzI)
+
 When you feeling ready with your site it's time to publish it on [GitHub Pages](https://pages.github.com/). GitHub Pages uses Jekyll by default so we can push the jekyll-files. **OBS! The site you will publish is going to be public.** Do the following.
 
 1. Create a [new empty public GitHub repositories](https://github.com/new) and name it in the form `<YOUR GITHUB USERNAME>.github.io`
