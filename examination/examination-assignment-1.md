@@ -25,7 +25,7 @@ Make sure you have followed the "Getting started guide". If so you should alread
 1. `git clone` your private repo named `<YOUR USERNAME>-examination-1` found in [Github/1dv022](http://github.com/1dv022) into a suitable folder on your computer.
 2. `cd <YOUR USERNAME>-examination-1`into the folder
 3. `git pull https://github.com/1dv022/jekyll-boilerplate.git` to get a vagrant template for your jekyll project. (This step is optional. If you want, you can create your own vagrant build from scratch. Note that the instructions in this document no longer will apply if you do, you are on your own.)
-4. do a `git add .` and git `git commit -m "Initial"` followed by `git push`
+4. do a `git push` to push your repo to Github
 5. follow the instructions in the [README.md file of the vagrant-boilerplate](https://github.com/1dv022/jekyll-boilerplate/blob/master/README.md). Skip step 1 in the guide since you did that under 3.
 
 You should now be up and running. Remember to do a commit after every isolated feature/bug/addition/etc.
