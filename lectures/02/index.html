@@ -1,0 +1,526 @@
+﻿<!doctype html>
+<html lang="sv-se">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>02 - Lecture - Client-based web programming (1DV022)</title>
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <link rel="icon" href="../images/favicon.png" type="image/png" />
+
+    <link rel="stylesheet" href="../reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="../reveal.js/css/theme/black.css" id="theme">
+    <link rel="stylesheet" href="../reveal.js/css/theme/black.lnu.css" id="theme">
+
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="../reveal.js/lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div class="reveal lnu">
+
+        <!-- Any section element inside of this container is displayed as a slide -->
+        <div class="slides">
+            <!-- Start -->
+            <section class="center" data-state="lnu-intro">
+                <h3>Client-based Web Programming</h3>
+                <h3>(1DV022)</h3>
+                <h1>Lecture 02</h1>
+                <div class="lnu-footer">
+                    <img src="../images/lnu-logotype.png" />
+                    <img src="../images/lnu-symbol.png" />
+                </div>
+            </section>
+
+            <!-- CC -->
+            <section data-state="lnu-cc">
+                <h2>Licence for this work</h2>
+                <p>
+                    This work is produced by Johan Leitet for the course Client-based Web Programming (1DV022) at Linnaeus University.
+                </p>
+                <p>All content in this work excluding photographs, icons, picture of course litterature and Linnaeus University logotype and symbol, is licensied under a 
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a><br />Creative Commons Attribution 4.0 International License</a>.</p>
+                <h4>You are free to </h4>
+                <ul>
+                    <li>copy and redistribute the material in any medium or format</li>
+                    <li>spread the whole or parts of the content</li>
+                    <li>show the whole or parts of the content publicly and digital</li>
+                    <li>convert the content to another format</li>
+                    <li>change the content</li>
+                </ul>
+                <p>
+                    If you change the content do not use the photographs, icons, picture of the course literature or Linnaeus University logotype and symbol in your new work!
+                </p>
+                <p>
+                    At all times you must give credit to: ”Linnaeus university – Client-based Web Programming (1DV022)” with the link https://coursepress.lnu.se/kurs/klientbaserad-webbprogrammering/ and to the Creative Common-license above.
+                </p>
+            </section>
+
+            <!-- Content -->
+            <section data-markdown>
+
+                <script type="text/template">
+                    ## Content
+
+                    * The Browser
+                      * Statistics
+                      * Compatibility
+                      * Internals
+                      * Devtools
+                    * JavaScript in the browser 
+                      * Where to load scripts
+                      * Sandboxing
+                      * Polution
+                </script>
+                <pre><code></code></pre> 
+            </section>
+              
+        <!-- The browser -->
+        <section>
+            
+            <!-- Crockford quote -->
+            <section>
+                <blockquote>"The browser is a really hostile programming environment." <br><br>-- <a href="https://youtu.be/v2ifWcnQs6M">Douglas Crockford,<br>The JavaScript Programming Language</a></blockquote>
+            </section>
+
+             <!-- Client / Server -->
+            <section class="noborderimages">
+                <h2>Server - Client</h2>
+                <br>
+                <div style="text-align:center;">
+                <img style="padding-right:25%;" src="../images/servers.png" />
+                
+                <img style="padding-left:25%"  src="../images/browsers18.png" />
+                </div>
+            </section>
+       
+           <!-- Browzers -->
+            <section class="noborderimages" data-markdown>
+                <script type="text/template">
+                ## Browers
+
+                |         | Usage world wide           | Usage Sweden  | 
+                | ------------- |:-------------:| :-----:|
+                | ![](https://raw.githubusercontent.com/alrra/browser-logos/master/chrome-android/chrome-android_64x64.png)      | 54% (34%) | 45% (32%) |
+                | ![](https://raw.githubusercontent.com/alrra/browser-logos/master/internet-explorer-tile/internet-explorer-tile_64x64.png) | 16% (2%)      |    17% (-) | 
+                | ![](https://raw.githubusercontent.com/alrra/browser-logos/master/firefox/firefox_64x64.png)      | 16% (-)      |   14% (-) |
+                | ![](https://raw.githubusercontent.com/alrra/browser-logos/master/safari/safari_64x64.png) | 9% (21%)      |    20% (60%) |
+                | ![](https://raw.githubusercontent.com/alrra/browser-logos/master/opera/opera_64x64.png) | 2% (11%)     |    - (-) |
+                | ![](https://raw.githubusercontent.com/alrra/browser-logos/master/edge/edge_64x64.png) | - (-)     |    - (-) |
+                
+                <p class="lnu source">http://gs.statcounter.com/</p>
+                </script>
+            </section>
+
+             <!-- Compatibility -->
+            <section class="noborderimages" data-markdown>
+                <script type="text/template">
+                ## Compatibility
+
+                Sorry, but you are on your own...<br><br><br><br><br><br>
+
+                * http://caniuse.com/
+                * https://developer.mozilla.org
+                * ...
+
+                </script>
+            </section>
+        
+        </section>
+
+       
+
+        <!-- Browser components Main Section -->
+        <section>
+
+            <!-- Browser components -->
+            <section class="noborderimages" data-markdown>
+                <script type="text/template">
+                ## Browser components
+
+                * User Interface
+                  * Buttons, search/adress field
+                * Browser/rendering engine
+                  * Parse and layout html and css
+                * JavaScript engine
+                  * Interprets and executes JS
+                * Network layer
+                  * Handles request/responses
+                * Data persistence
+                  * Cookies
+                  * Web storage
+                  * Cache
+
+
+                </script>
+            </section>
+            
+            <!-- Browser flow 1 -->
+            <section class="noborderimages" data-markdown>
+                <script type="text/template">
+                ## Browser components
+                <p class="lnu source">[Grosskurth, A., & Godfrey, M. (2005). A reference architecture for Web browsers.](http://grosskurth.ca/papers/browser-refarch.pdf)</p>
+                ![](../images/browser_parts1.png)
+
+                </script>
+            </section>
+            
+            <!-- Browser flow -->
+            <section class="noborderimages" data-markdown>
+                <script type="text/template">
+                    ## Scripted browser
+
+                    ![](../images/flow2.png)
+
+                    <p class="lnu source">Source: Douglas Crockford: An Inconvenient API - The Theory of the DOM</p>
+                    </script>
+            </section>
+
+            <!-- Browser and JS engines -->
+            <section class="noborderimages" data-markdown>
+                <script type="text/template">
+                <br>
+
+                |         | Browser/<br>rendering Engine           | JavaScript<br>Engine  | 
+                | ------------- |:-------------:| :-----:|
+                | <div>![](https://raw.githubusercontent.com/alrra/browser-logos/master/chrome-android/chrome-android_64x64.png) ![](https://raw.githubusercontent.com/alrra/browser-logos/master/opera/opera_64x64.png)</div>     | Blink | V8 |
+                | ![](https://raw.githubusercontent.com/alrra/browser-logos/master/internet-explorer-tile/internet-explorer-tile_64x64.png) | Trident      |    Chakra | 
+                | ![](https://raw.githubusercontent.com/alrra/browser-logos/master/firefox/firefox_64x64.png)      | Gecko      |   SpiderMonkey |
+                | ![](https://raw.githubusercontent.com/alrra/browser-logos/master/safari/safari_64x64.png) | WebKit     |    Nitro |
+                | ![](https://raw.githubusercontent.com/alrra/browser-logos/master/edge/edge_64x64.png) | EdgeHTML     |    Chakra (fork) |
+               
+                </script>
+            </section>
+
+
+
+        </section>
+        
+        <!-- Javascript and the browser -->
+        <section>       
+            <!-- Sandboxing -->
+            <section class="noborderimages" data-markdown>
+                <script type="text/template">
+                    ## Why javascript in the browser?
+
+                    * Why is javascript in the browser?
+                      * Because of reason
+                    * Use javascript to what?
+                      * Applications / Games
+                      * Advanced rendering
+                      * Load content in the<br> background (AJAX)
+                      * The web becomes the platform
+
+
+                </script>
+            </section>  
+
+            <!-- Seperation of concern -->
+            <section class="noborderimages" data-markdown>
+                <script type="text/template">
+                    #The goal
+
+                    Seperation of concerns (SoC)<br><br>
+
+                    |         |            |   | 
+                    | :-------------: |:-------------:| :-----:|
+                    | ![](../images/html64p.png) | .html | Structure |
+                    | ![](../images/css64g.png) | .css      |    Presentation | 
+                    | ![](../images/js64y.png)    | .js | Behavior |
+                </script>
+            </section>
+            
+            <!-- Sandboxing -->
+            <section class="noborderimages" data-markdown>
+                <script type="text/template">
+                    ## Sandboxing
+
+                    Javascript can not:
+                    * Read from the local file system
+                    * Access some APIs without the users permission
+                      * Webcam/Audio/Location/Contacts...
+                    * Communicate with third party servers
+                      * CORS (Cross Origin Resouce Sharing) solves this
+                    * Find out the (correct) color of a <a href="http://www.sunet.se" id="theLink">link...</a>
+                    
+                </script>
+                    <!-- var l = document.getElementById("theLink");
+                        window.getComputedStyle(l).color; -->
+            </section>
+
+
+            <style>
+                #theLink { color: blue;}
+                #theLink:visited { color: purple;}
+            </style>
+
+            <!-- JS in the Browser - Scripts at bottom -->
+            <section>
+                <h2>JS in the Browser</h2>
+                    Recommended: Add scripts at the far bottom of the page
+                    <p class="lnu source">index.html</p>
+<pre><code data-trim contenteditable>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title>&lt;/title&gt;
+    &lt;/head&gt;
+&lt;body&gt;
+    &lt;section&gt;
+        ... A lot of content here ...
+    &lt;/section&gt;
+
+    &lt;script src="javascript/build.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+</pre></code>
+
+<pre><code style="color:white">
+    dist/
+       |-javascript/
+                  |-build.js
+       |-index.html
+
+      </code></pre>
+            </section>
+            
+            <!-- JS in the Browser -->
+            <section>
+                    <h2>JS in the Browser</h2>
+                    You can add scripts on the page. Avoid this.
+                    <p class="lnu source">index.html</p>
+<pre><code data-trim contenteditable>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title>&lt;/title&gt;
+    &lt;/head&gt;
+&lt;body&gt;
+    &lt;script&gt;
+      console.log("Testing out js in the browser");
+    &lt;/script&gt;
+    
+    &lt;section&gt;
+        ... A lot of content here ...
+    &lt;/section&gt;
+&lt;/body&gt;
+</pre></code>
+            </section>
+
+        
+           <!-- Async, Defer - Remove? -->
+            <section class="noborderimages" data-markdown>
+                <script type="text/template">
+                &lt;script&gt;<br>
+                <img src="../images/script.svg" width="70%" />
+
+                &lt;script async&gt;<br>
+                <img src="../images/script_async.svg" width="70%" />
+
+                &lt;script defer&gt;<br>
+                <img src="../images/script_defer.svg" width="70%" />
+
+                <p class="lnu source">http://www.growingwiththeweb.com/2014/02/async-vs-defer-attributes.html</p>
+                </script>
+            </section>
+
+            
+            <!-- Folder structure -->
+            <section class="noborderimages" data-markdown>
+                <script type="text/template">
+                    #Folder structure
+
+                    An *example* of a folder structure
+
+                    ```
+                    client/
+                         |-source/
+                                |-js/
+                                   |-app.js
+                                |-scss/
+                                |-index.html
+                         |-debug/
+                               |-javascript/
+                               |-stylesheet/
+                               |-index.html
+                         |-dist/
+                              |-javascript/
+                              |-stylesheet/
+                              |-index.html
+                    ```
+                </script>
+            </section>
+
+            <!-- Global -->
+            <section class="noborderimages" data-markdown>
+                <script type="text/template">
+                    #Everything is global!
+                    In the browser there are no modules by default.<br>
+                    Everything is global on the object "window"
+
+                    <p clasS="lnu source">app.js</p>
+                    ```js
+                        var temp = 22;
+
+                        function myFunction(){
+
+                            increaseTempBy = 12;
+
+                            temp += increaseTempBy;
+
+                        }
+                    ```
+
+                    ```js
+                        console.log(window.temp); // 24
+
+                        console.log(window.increaseTempBy); // 12
+                    ```
+                </script>
+            </section>
+
+            <!-- Browserify -->
+            <section class="noborderimages" data-markdown>
+                <script type="text/template">
+                    ##"Browserify" to the rescue
+                    
+                    We can use node-modules in the browser!
+
+                    <p clasS="lnu source">client/source/js/app.js</p>
+                    ```javascript
+                    var statistics = require("./statistics");
+
+                    var stats = statistics.analyze([1, 3, 4, 5, 6, 7]);
+
+                    console.log(stats.max);
+                    ```
+                    
+                    <p clasS="lnu source">client/source/js/statistics.js</p>
+                    ```
+                    exports.analyze = function(data) {
+                        ...
+                    };
+
+                    var mean = function mean(data) {
+                        ...
+                    };
+
+                    ```
+                </script>
+            </section>
+
+
+            <!-- Browserify - Build -->
+            <section class="noborderimages" data-markdown>
+                <script type="text/template">
+                ## "Browserify" - Build step
+                ... however, we need an aditional build step.
+
+                <p clasS="lnu source">Terminal:</p>
+                ```
+                   browserify source/js/app.js > dist/javascript/bundle.js
+                ```
+
+                </script>
+            </section>
+
+
+
+           <section data-markdown>
+                <script type="text/template">
+                ## "Browserify" - Debug step
+                ... using --debug we get source mapping.
+
+                <p clasS="lnu source">Terminal:</p>
+                ```
+                   browserify source/js/app.js > debug/javascript/bundle.js --debug
+                ```
+
+                ![](../images/browserify_client.png)<br>
+                ![](../images/browserify_browser.png)
+
+
+                </script>
+            </section>
+
+        </section>
+          
+            <!-- Developer tools -->
+            <section class="noborderimages" data-markdown>
+                <script type="text/template">
+                ## Developer tools in the browser
+                
+                * Inspect the document
+                 * Edit html/css
+                * Watch network traffic
+                 * Load times/sizes
+                 * Throttling
+                * Debug JavaScript
+                * Timelines/profiling
+                 * Track down memoryleaks
+                 * Find bottlenecks
+                * Console
+                </script>
+            </section>
+
+            
+            <section>
+                
+                <div>Icon made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed under <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a></div>
+
+            </section>
+
+        
+        </div>
+    </div>
+
+    <script src="../reveal.js/lib/js/head.min.js"></script>
+    <script src="../reveal.js/js/reveal.js"></script>
+
+    <script>
+        // Full list of configuration options available at:
+        // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            width: 1280,
+            height: 800,
+            controls: true,
+            progress: true,
+            history: true,
+            center: false,
+
+            transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+            // Optional reveal.js plugins
+            dependencies: [
+                { src: '../reveal.js/lib/js/classList.js', condition: function () { return !document.body.classList; } },
+                { src: '../reveal.js/plugin/markdown/marked.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+                { src: '../reveal.js/plugin/markdown/markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+                { src: '../reveal.js/plugin/highlight/highlight.js', async: true, condition: function () { return !!document.querySelector('pre code'); }, callback: function () { hljs.initHighlightingOnLoad(); } },
+                { src: '../reveal.js/plugin/zoom-js/zoom.js', async: true },
+                { src: '../reveal.js/plugin/notes/notes.js', async: true }
+            ]
+        });
+
+    </script>
+
+</body>
+</html>

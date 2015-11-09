@@ -162,3 +162,10 @@
     margin-left:100px;
     color: #2C76A8;
 }
+
+.noborderimages img {
+    border: none !important;
+    background: none !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+}
