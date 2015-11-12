@@ -29,7 +29,7 @@ Get started by watchning this recording:
 |  branch | [tiny-tunes](https://github.com/1dv022/exercise/tree/tiny-tunes) |
 | Level  | A  |
 | Study week  | 2-3 |
-| Lectures| L02 |
+| Lectures| <= L03 |
 | Keywords| Getting started, DOM, Events, Templates, Document Fragment|
 | Solutions | [Code](#)<br>[Recording](https://youtu.be/Ng0-sJGG9wE)|
 
