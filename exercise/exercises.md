@@ -33,3 +33,13 @@ Get started by watchning this recording:
 | Keywords| Getting started, DOM, Events, Templates, Document Fragment|
 | Solutions | [Code](#)<br>[Recording](https://youtu.be/Ng0-sJGG9wE)|
 
+##LNU it
+|  |  |
+| ------------- | ------------- |
+|  branch | [lnu-it](https://github.com/1dv022/exercise/tree/lnu-it) |
+| Level  | A  |
+| Study week  | 2-3 |
+| Lectures| <= L03 |
+| Keywords| Getting started, DOM, Style manipulation|
+| Readme | [https://github.com/1dv022/exercise/blob/lnu-it/exercise/lnu-it/README.md](https://github.com/1dv022/exercise/blob/lnu-it/exercise/lnu-it/README.md)|
+
