@@ -46,9 +46,9 @@ Get started by watchning this recording:
 ##Temple of DOM
 |  |  |
 | ------------- | ------------- |
-|  branch | [lnu-it](https://github.com/1dv022/exercise/tree/temple-of-DOM) |
+|  branch | [temple-of-DOM](https://github.com/1dv022/exercise/tree/temple-of-DOM) |
 | Level  | B  |
 | Study week  | 2-3 |
 | Lectures| <= L03 |
 | Keywords| DOM, recursive, templates|
-| Readme | [https://github.com/1dv022/exercise/blob/temple-of-DOM/exercise/temple-of-DOM/README.md](https://github.com/1dv022/exercise/blob/temple-of-DOM/exercise/temple-of-DOM/README.md)|
+| Readme | [https://github.com/1dv022/exercise/blob/temple-of-DOM/exercise/temple-of-DOM/client/README.md](https://github.com/1dv022/exercise/blob/temple-of-DOM/exercise/temple-of-DOM/client/README.md)|
