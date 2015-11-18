@@ -52,3 +52,15 @@ Get started by watchning this recording:
 | Lectures| <= L03 |
 | Keywords| DOM, recursive, templates|
 | Readme | [https://github.com/1dv022/exercise/tree/temple-of-DOM/exercise/temple-of-dom](https://github.com/1dv022/exercise/tree/temple-of-DOM/exercise/temple-of-dom)|
+
+##Click Game
+|  |  |
+| ------------- | ------------- |
+|  branch | [click-game](https://github.com/1dv022/exercise/tree/click-game) |
+| Level  | B  |
+| Study week  | 2-3 |
+| Lectures| <= L03 |
+| Keywords| DOM, style manipulation, event, timers|
+| Readme | [https://github.com/1dv022/exercise/tree/click-game/exercise/click-game](https://github.com/1dv022/exercise/tree/click-game/exercise/click-game)|
+
+https://github.com/1dv022/exercise/tree/click-game/exercise/click-game
