@@ -51,4 +51,4 @@ Get started by watchning this recording:
 | Study week  | 2-3 |
 | Lectures| <= L03 |
 | Keywords| DOM, recursive, templates|
-| Readme | [https://github.com/1dv022/exercise/blob/temple-of-DOM/exercise/temple-of-DOM/client/README.md](https://github.com/1dv022/exercise/blob/temple-of-DOM/exercise/temple-of-DOM/client/README.md)|
+| Readme | [https://github.com/1dv022/exercise/tree/temple-of-DOM/exercise/temple-of-dom](https://github.com/1dv022/exercise/tree/temple-of-DOM/exercise/temple-of-dom)|
