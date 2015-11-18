@@ -63,4 +63,3 @@ Get started by watchning this recording:
 | Keywords| DOM, style manipulation, event, timers|
 | Readme | [https://github.com/1dv022/exercise/tree/click-game/exercise/click-game](https://github.com/1dv022/exercise/tree/click-game/exercise/click-game)|
 
-https://github.com/1dv022/exercise/tree/click-game/exercise/click-game
