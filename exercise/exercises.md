@@ -71,6 +71,6 @@ Get started by watchning this recording:
 | Study week  | 2-3 |
 | Lectures| <= L03 |
 | Keywords| DOM, style manipulation, event, timers|
-| Readme | [https://github.com/1dv022/exercise/blob/memory/exercise/memory/README.md](https://github.com/1dv022/exercise/blob/memory/exercise/memory/README.md)|
+| Readme | [Instructions](https://github.com/1dv022/exercise/blob/memory/exercise/memory/README.md)|
 | Solutions | Code<br>Extended recording to come|
 
