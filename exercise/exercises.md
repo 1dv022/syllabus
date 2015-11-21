@@ -43,6 +43,18 @@ Get started by watchning this recording:
 | Keywords| Getting started, DOM, Style manipulation|
 | Readme | [https://github.com/1dv022/exercise/blob/lnu-it/exercise/lnu-it/README.md](https://github.com/1dv022/exercise/blob/lnu-it/exercise/lnu-it/README.md)|
 
+##BartBoard
+|  |  |
+| ------------- | ------------- |
+|  branch | [bartboard](https://github.com/1dv022/exercise/tree/bartboard) |
+| Level  | A  |
+| Study week  | 2-3 |
+| Lectures| <= L03 |
+| Keywords| DOM, event, timers|
+| Readme | [Instructions](https://github.com/1dv022/exercise/blob/memory/exercise/bartboard/README.md)|
+| Solutions | Code<br>[Extended recording](https://youtu.be/I7HJwo98EQE)|
+
+
 ##Temple of DOM
 |  |  |
 | ------------- | ------------- |
