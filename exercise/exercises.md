@@ -51,7 +51,7 @@ Get started by watchning this recording:
 | Study week  | 2-3 |
 | Lectures| <= L03 |
 | Keywords| DOM, event, timers|
-| Readme | [Instructions](https://github.com/1dv022/exercise/blob/memory/exercise/bartboard/README.md)|
+| Readme | [Instructions](https://github.com/1dv022/exercise/blob/bartboard/exercise/bartboard/README.md)|
 | Solutions | Code<br>[Extended recording](https://youtu.be/I7HJwo98EQE)|
 
 
