@@ -1,0 +1,1395 @@
+﻿<!doctype html>
+<html lang="sv-se">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>04 - Lecture - Client-based web programming (1DV022)</title>
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <link rel="icon" href="../images/favicon.png" type="image/png" />
+
+    <link rel="stylesheet" href="../reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="../reveal.js/css/theme/black.css" id="theme">
+    <link rel="stylesheet" href="../reveal.js/css/theme/black.lnu.css" id="theme">
+
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="../reveal.js/lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div class="reveal lnu">
+
+        <!-- Any section element inside of this container is displayed as a slide -->
+        <div class="slides">
+            <!-- Start -->
+            <section class="center" data-state="lnu-intro">
+                <h3>Client-based Web Programming</h3>
+                <h3>(1DV022)</h3>
+                <h1>Lecture 04</h1>
+                <div class="lnu-footer">
+                    <img src="../images/lnu-logotype.png" />
+                    <img src="../images/lnu-symbol.png" />
+                </div>
+            </section>
+
+            <!-- CC -->
+            <section data-state="lnu-cc">
+                <h2>Licence for this work</h2>
+                <p>
+                    This work is produced by Johan Leitet for the course Client-based Web Programming (1DV022) at Linnaeus University.
+                </p>
+                <p>All content in this work excluding photographs, icons, picture of course litterature and Linnaeus University logotype and symbol, is licensied under a 
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a><br />Creative Commons Attribution 4.0 International License</a>.</p>
+                <h4>You are free to </h4>
+                <ul>
+                    <li>copy and redistribute the material in any medium or format</li>
+                    <li>spread the whole or parts of the content</li>
+                    <li>show the whole or parts of the content publicly and digital</li>
+                    <li>convert the content to another format</li>
+                    <li>change the content</li>
+                </ul>
+                <p>
+                    If you change the content do not use the photographs, icons, picture of the course literature or Linnaeus University logotype and symbol in your new work!
+                </p>
+                <p>
+                    At all times you must give credit to: ”Linnaeus university – Client-based Web Programming (1DV022)” with the link https://coursepress.lnu.se/kurs/klientbaserad-webbprogrammering/ and to the Creative Common-license above.
+                </p>
+            </section>
+
+            <!-- Content -->
+            <section data-markdown>
+                <script type="text/template">
+                ## Content
+
+                * The event loop, queue 
+                * Asynchronous / Synchronous programming
+                * HTTP
+                * Ajax
+                  * XMLHttpRequest
+                * WebStorage
+             
+                </script>
+                <pre><code></code></pre> <!-- Fix for color coding in md -->
+            </section>
+            
+            <!-- Event / Async --> 
+            <section>
+                 <!-- The event loop -->
+                <section class="noborderimages" data-markdown>
+                    <script type="text/template">
+                    ## The queue
+
+                    ![](https://docs.google.com/drawings/d/1e4BVPRteCsIQ4rg8ZcqO0prt7S3cC7kkxM65nsm4AYM/pub?w=383&h=755)<!-- .element: style="float:left" -->
+                    <br><br><br><br>
+                    ```JavaScript
+                    function hello(){
+                        console.log("When do I say hello?");
+                    }
+
+                    function run(){
+                        setTimeout(hello, 0);
+
+                        console.log("I run...");
+                        console.log("... very fast.");
+                    }
+
+                    run();
+                    ```
+
+                    </script>
+                </section>
+                
+                <!-- The event loop -->
+                <section class="noborderimages" data-markdown>
+                    <script type="text/template">
+                    ## Blocking code
+                    Avoid blocking calls. (Synchronous calls)
+
+                    ```JavaScript
+                    function hello(){
+                        console.log("When do I say hello?");
+                    }
+
+                    function run(){
+                        setTimeout(hello, 0);
+
+                        console.log("I run...");
+                        alert("...");
+                        console.log("... very fast.");
+                    }
+
+                    run();
+                    ```
+                    https://jsfiddle.net/Leitet/dvktvphm/
+
+                    </script>
+                </section>
+
+                <!-- Sync / Async -->
+                <section class="noborderimages" data-markdown>
+                    <script type="text/template">
+                    ## Asynchronous programming
+
+                    ![](https://docs.google.com/drawings/d/1mVIs2Xpg3a6SsfDgU-pQPu79GwdRgphXRR0fOEhOyWk/pub?w=1417&h=637)<!-- .element: style="float:left" -->
+             
+                    </script>
+                </section>
+                 <section class="noborderimages" data-markdown>
+                    <script type="text/template">
+                    ## Asynchronous programming
+
+                    ![](https://docs.google.com/drawings/d/1S9pH2VOiIwXvu4wUMGI6f7TxlqEy_OjhzzjriK6E2Ro/pub?w=1417&h=637)<!-- .element: style="float:left" -->
+             
+                    </script>
+                </section>
+
+
+
+
+                </section>
+            </section>
+            
+            <!-- Network -->
+            <section>
+
+                <section class="noborderimages" data-markdown>
+                    <script type="text/template">
+                    ## HTTP
+                    Hypertext Transfer Protocol
+
+                    Methods:
+                    * GET
+                    * POST
+                    * PUT
+                    * DELETE
+                    
+                    </script>
+                </section>
+
+                 <section class="noborderimages" data-markdown>
+                    <script type="text/template">
+                    ## HTTP status codes
+                    
+                    | [Status Code](https://developer.mozilla.org/en-US/docs/Web/HTTP/Response_codes)     |            |
+                    | :-------------: |:-------------:|
+                    | 200      | OK |
+                    | 301 | Moved Permanently     |
+                    | 307 | Temporary Redirect    |
+                    | 400 | Bad request    |
+                    | 401 | Unauthorized |
+                    | 403 | Forbidden |
+                    | 404 | Not Found |
+                    | 500 | Internal server error |
+                    | 503 | Sevice Unavailable |
+                    
+
+                    </script>
+                </section>
+
+                <section class="noborderimages" data-markdown>
+                    <script type="text/template">
+                    ## HTTP - GET
+                        
+                    Request:
+                    ```http
+                    GET /theserverpage/?user=Ellen&message=Hello HTTP/1.1
+                    Host: lnuserver.se
+                    User-Agent: Leitets awsome browser
+
+                    ```
+
+                    Response:
+                    ```http
+                    HTTP/1.1 200 OK
+                    Content-Length: 65432
+                    Content-Type: text/html
+
+                    <!doctype html>
+                    <html>
+                      ... rest of document
+
+                    ```
+                    
+                    </script>
+                </section>
+
+                <section class="noborderimages" data-markdown>
+                    <script type="text/template">
+                    ## HTTP - POST
+                        
+                    Request:
+                    ```http
+                    POST /theserverpage/ HTTP/1.1
+                    Host: lnuserver.se
+                    Content-Length: 24
+
+                    user=Ellen&message=Hello
+
+                    ```
+
+                    Response:
+                    ```http
+                    HTTP/1.1 200 OK
+                    Content-Length: 65432
+                    Content-Type: text/html
+
+                    <!doctype html>
+                    <html>
+                      ... rest of document
+
+                    ```
+                    
+                    </script>
+                </section>
+
+                <!-- Synchronous Ajax -->
+                <section class="noborderimages" data-markdown>
+                    <script type="text/template">
+                    ## Synchronous requests
+                    Do not do this
+
+                    ```
+                    var req = new XMLHttpRequest();
+
+                    req.open("GET", "data.json", false);
+                    
+                    req.send();
+
+                    console.log(req.responseText);
+                    ```
+                
+                    ![](https://docs.google.com/drawings/d/1vIpcF6jlqqpMi_uQ_XQjW0_LOR9INSFdWMKtrM4DP2s/pub?w=1476&h=555)
+                    </script>
+                </section>
+
+                <section class="noborderimages" data-markdown>
+                    <script type="text/template">
+                    ## Asynchronous request
+
+                    ```JavaScript
+                    var req = new XMLHttpRequest();
+
+                    req.addEventListener("load", function()){
+                        // function to run when response from server
+                        console.log(req.responseText);
+                    });
+
+                    req.open("GET", "data.json");
+                    req.send();
+
+                    // Do a lot of other stuff
+                    ```
+                    ![](https://docs.google.com/drawings/d/1T6Cn2zGIg9RoUi4c5oyb6lPp5xArnoxDAy9BXzGS2uE/pub?w=1476&h=555)
+             
+                    </script>
+                </section>
+                
+                <!-- Ajax -->
+                <section class="noborderimages" data-markdown>
+                    <script type="text/template">
+                    ## AJAX
+                    **A**synchronous **J**avascript **A**nd **X**ML  
+
+                    * 1999
+                      * Microsoft adds an Active X-control (XMLHttpRequest) into Internet Explorer 5.
+                    * 2000-tal
+                      * Mozilla, Safari and Opera implements XMLHttpRequest-object.
+                    * 2005
+                      * The term *AJAX* was made up by Jesse James Garrett through the article *[Ajax: A New Approach to Web Applications](http://adaptivepath.org/ideas/ajax-new-approach-web-applications/)*
+                    * 2006
+                      * Microsoft adds the XMLHttpRequest-objeect in the same way as other browsers (IE7) 
+
+                    </script>
+                </section>
+                
+                <section class="noborderimages" data-markdown>
+                    <script type="text/template">
+                    ## CORS
+                    Cross-Origin Resource Sharing
+
+                    Problem
+                    * Scripts from domain-a.com can only make XMLHttpRequests to domain-a.com
+                      * ![](../images/corserror.png)
+
+                    Solution
+                    * Use your server as a proxy
+                    * Implement CORS headers on the server to call
+
+
+                    </script>
+                </section>
+
+                <section class="noborderimages" data-markdown>
+                    <script type="text/template">
+                    ![](https://docs.google.com/drawings/d/1cqR9PDV3ycg5swbVvXmLsXfS_jiar5RmRbDNyfM8QXg/pub?w=1440&h=1080)
+
+                    </script>
+                </section>
+                
+
+
+                 <section class="noborderimages" data-markdown>
+                    <script type="text/template">
+                    ## Callback pattern
+
+                    ```JavaScript
+                    module.exports.request = function(config, callback) {
+                        var req = new XMLHttpRequest();
+
+                        req.addEventListener("load", function() {
+
+                            if (req.status >= 400) {
+                                callback(req.status);
+                            }
+
+                            callback(null, req.responseText);
+                        });
+
+                        req.open(config.method, config.url);
+                        req.send(null);
+                    }
+                    ```
+
+                    ```JavaScript
+                    var ajax = require("./ajax");
+
+                    ajax.request({method: "get", url: "data.json"}, function(error, response){
+
+                        if(error){
+                            throw new Error("Network error " + error);
+                        }
+
+                        console.log(response);
+                    });
+
+                    ```     
+                    </script>
+                </section>
+
+                <section class="noborderimages" data-markdown>
+                    <script type="text/template">
+                    ## "Callback hell", AKA "Temple of DOOM"
+
+                    https://gist.github.com/Leitet/b8a08c0b2c83dc40875f
+
+                    ```JavaScript
+                    var ajax = require("./ajax");
+                    var url = "first.json";
+
+                    ajax.request({method: "get", url: url}, function(error, response){
+
+                        url = doSomethingToGetNewURL(response);
+                        ajax.request({method: "get", url: url}, function(error, response){
+
+                            url = doSomethingToGetNewURL(response);
+                            ajax.request({method: "get", url: url}, function(error, response){
+
+                                url = doSomethingToGetNewURL(response);
+                                ajax.request({method: "get", url: url}, function(error, response){
+                                    doSomethingWithTheFinalData(response);
+
+                                });
+                            });
+                        });
+                    });
+                    ```
+                    </script>
+                </section>
+                
+                <!-- Promises -->
+                <section class="noborderimages" data-markdown>
+                    <script type="text/template">
+                    ## Promises
+
+                    ![]()<!-- .element: style="float:left" -->
+             
+                    </script>
+                </section>
+
+
+            </section>
+
+
+            <!-- JSON -->
+            <section>
+
+                <section class="noborderimages" data-markdown>
+                    <script type="text/template">
+                    ## JSON
+                    
+                    * JavaScript Object Notation
+                    * A subset of JavaScript. 
+                    * Language independent
+                    
+                    |         |            |
+                    | :-------------: |:-------------:|
+                    | RFC      | 4627 |
+                    | MIME | application/json     |
+                    | File | .json    |
+                    | Web | http://json.org    |
+                    | Discoverer | Douglas Crockford    |
+
+                    </script>
+                </section>
+
+                <section class="noborderimages" data-markdown>
+                    <script type="text/template">
+                    ## JSON
+                    
+                    ```json
+                    {
+                        "name": "Bill",
+                        "type": 2,
+                        "alive": false
+                    }
+                    ```
+                    * Datatypes:
+                      * string, number, boolean, null, object or array 
+
+                    ```json
+                    [
+                      {"name":"Bill","type":2, "alive": false},
+                      {"name":"Sam","type":5, "alive": false},
+                      {"name":"Jason","type": 1, "alive": true }
+                    ]
+
+                    ```
+
+                    JSON-lint: http://jsonlint.com/
+                    </script>
+                </section>
+
+                <section class="noborderimages" data-markdown>
+                    <script type="text/template">
+                    ## JSON
+                    
+                    * JSON.parse()
+                      * JSON -> Javascript
+                    * JSON.stringify()
+                      * Javascript -> JSON
+
+                    ![](../images/jsonstringify.png)<!-- .element: style="float:right; padding-left:20px" -->
+
+
+                    ```javascript
+                    var obj = {
+                        name: "Ellen",
+                        age: 25,
+                        city: "Kalmar"
+                    }
+
+                    console.log(obj);
+                    obj = JSON.stringify(obj);
+                    console.log(obj);
+                    obj = JSON.parse(obj);
+                    console.log(obj);
+                    ```
+
+                   
+                    
+                    </script>
+                </section>
+            </section>
+
+            <!-- Forms and Fields -->
+            <section class="noborderimages" data-markdown>
+                    <script type="text/template">
+                    ## Forms
+                    
+                    * Make sure the normal form works without JS
+                    * Try to use configs from the form (method, action...)
+                    * form.addEventListener("submit", ...)
+                    * Disable the submit-button
+
+
+                    See recorded demo ["AutoComplete"](#)
+
+                    </script>
+            </section>
+            
+
+
+            <!-- WebStorage -->
+            <section>
+               <section class="noborderimages" data-markdown>
+                    <script type="text/template">
+                    ## Storing data client-side
+
+                    * Cookies
+                    * Web Storage
+                      * Session storage
+                      * Local storage
+                    * IndexedDB
+                  
+                    </script>
+                </section>
+                <section class="noborderimages" data-markdown>
+                    <script type="text/template">
+                    ## Cookies
+
+                    * Often used to keep a session againt the server
+                    * Use max 4096 bytes per cookie (RFC6265)
+                    * No more than 50 cookies per domain. (RFC6265) 
+
+                    ![](../images/cookies.png)
+                  
+                    </script>
+                </section>
+
+                <section class="noborderimages" data-markdown>
+                    <script type="text/template">
+                    ## Web Storage API
+
+                    * Local Storage & Session Storage
+
+                    ![](../images/webstorage.png)<!-- .element: style="float:left; padding-right:20px" -->
+
+                    ```JavaScript
+                    function populateStorage() {
+                          localStorage.setItem('bgcolor', document.getElementById('bgcolor').value);
+                          localStorage.setItem('font', document.getElementById('font').value);
+                          localStorage.setItem('image', document.getElementById('image').value);
+
+                          setStyles();
+                    }
+
+                    function setStyles() {
+                          var currentColor = localStorage.getItem('bgcolor');
+                          var currentFont = localStorage.getItem('font');
+                          var currentImage = localStorage.getItem('image');
+                          ...
+                    ```
+
+                    * setItem, getItem, removeItem
+
+                    <span class="lnu source">http://mdn.github.io/web-storage-demo/</span>                          
+                    </script>
+                </section>
+
+                <section class="noborderimages" data-markdown>
+                    <script type="text/template">
+                    ## JSON in storage
+
+                     ```JavaScript
+                    var style = {
+                        bgcolor: document.getElementById('bgcolor').value,
+                        font: document.getElementById('font').value,
+                        image: document.getElementById('image').value
+                    }
+
+
+                    localStorage.setItem("style", JSON.stringify(style));
+
+                    ...
+
+                    JSON.parse(localStorage.getItem("style"));
+                    ```
+
+                    </script>
+                </section>
+
+                 <section class="noborderimages" data-markdown>
+                    <script type="text/template">
+                    ## "Lagen om elektronisk kommunikation"
+
+                    ![](../images/POLISEN.png)
+                    <span class="lnu source">[Lagen om elektronisk kommunikation på PTS](https://www.pts.se/sv/Bransch/Regler/Lagar/Lag-om-elektronisk-kommunikation/Cookies-kakor/)</span>
+
+                    </script>
+                </section>
+
+            </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- DOM -->
+        <section>
+            <section class="noborderimages" data-markdown>
+                <script type="text/template">
+                ## The DOM
+                
+                Document object model
+                ![](https://docs.google.com/drawings/d/1Oz05zW7ZsDlNeKFBgjIXnq41G773_pNXB_kd6nodRTM/pub?w=503&h=625) <!-- .element style="float:left" -->
+
+                ```
+                <html>
+                  <head>
+                    <title>Incident report</title>
+                  </head>
+                  <body>
+                    <h1>Incident report</h1>
+                    <p><a href="#">Last report</a></p>
+                    <p><img src="photo" alt="" /></p>
+                  </body>
+                </html>
+                ```
+
+                The javascript engines API against the rendering engine.
+                </script>
+            </section>
+
+            <section class="noborderimages" data-markdown>
+                <script type="text/template">
+                ## Nodetypes
+
+                |         | Name           | Value  | 
+                | :-------------: |:-------------:| :-----:|
+                | <span style="border: 6px solid yellow; padding: 0 50px; border-radius:10px">H1</span>      | ELEMENT_NODE | 1 |
+                | <span style="border: 6px solid blue; padding: 0 50px; border-radius:10px">#text</span> | TEXT_NODE     |   3 | 
+                | <span style="border: 6px solid green; padding: 0 50px; border-radius:10px">#comment</span> | COMMENT_NODE    |   8 |
+                | <span style="border: 6px solid purple; padding: 0 50px; border-radius:10px">#document</span> | DOCUMENT_NODE    |   9 |
+                | ... | ...    |   ... |
+
+                </script>
+            </section>
+            
+            <section class="noborderimages" data-markdown>
+                <script type="text/template">
+                ## \n
+
+                 <img style="float:left;r" src="https://docs.google.com/drawings/d/1kbstEL_9IanG_JPJYSyjp1OxSbrw_1Xq5lTekyZhrxc/pub?w=739&h=623" />
+
+                ```html
+                <html>\n
+                \t<head>\n
+                \t\t<title>Incident report</title>\n
+                \t</head>\n
+                \t<body>\n
+                \t\t<h1>Incident report</h1>\n
+                \t\t<p><a href="#">Last report</a></p>\n
+                \t\t<p><img src="photo" alt="" /></p>\n
+                \t</body>\n
+                </html>\n
+                ```
+                </script>
+            </section>
+
+
+
+             <!-- Traversing and selecting the DOM-->
+	        <section class="noborderimages" data-markdown>
+	            <script type="text/template">
+                ## Traversing the DOM
+
+                ![](https://docs.google.com/drawings/d/1SY36jZN7GqR7d2GQigKkE-W9HQcHpop9JHNBqf9s0DA/pub?w=1232&h=606)
+	            </script>
+	        </section>
+
+
+	        <section class="noborderimages" data-markdown>
+	            <script type="text/template">
+                    ##Selecting nodes
+
+                    |         | Parameter (ex)        | Returns  | 
+                    | :-------------: |:-------------:| :-----:|
+                    | getElementById      | id    |  Node-element|
+                    | getElementsByTagName| tag      |   Node-list| 
+                    | getElementsByClassName| class  |   Node-list| 
+
+
+
+                    ```javascript
+                    var mainDiv = document.getElementById("main");
+
+                    var pTags = document.getElementByTagName("p");
+                    console.log(pTags.length);
+
+                    var tags = document.getElementByClassName("post");
+                    console.log(tags.length);
+                    ```
+
+	            </script>
+	        </section>
+
+	        <section id="selectorsAPI" class="noborderimages" data-markdown>
+                <script type="text/template">
+                ##Selectors API 
+                - One API to rule them all
+
+
+                | | Returns       |
+                |:----------------- |:-------------:|
+                | querySelector     |  Node-element |
+                | querySelectorAll  |   Node-list   |
+                
+
+                ```
+                var mainDiv = document.querySelector("#main");
+
+                var pTags = document.querySelectorAll("p");
+
+                var tags = document.querySelectorAll("p.tag");
+                ```
+
+	            </script>
+	        </section>
+
+	        <section class="noborderimages" data-markdown>
+                <script type="text/template">
+                ## NodeList
+                NodeList.prototype !== Array.prototype
+
+                * Extending the NodeList (anti-pattern)
+                  * NodeList.prototype.forEach = Array.prototype.forEach;
+                * Borrowing methods
+                  * Array.prototype.forEach.call(nodes, function(node){ ... });
+                * Transform NodeList to Array
+                  * nodes = Array.prototype.slice.call(nodes);
+
+	            </script>
+	        </section>
+		</section>
+
+		<!-- Mainpulating the DOM -->
+		<section>
+			 <section class="noborderimages" data-markdown>
+                <script type="text/template">
+                    ## Manipulation
+                    <img style="float:left" src="https://docs.google.com/drawings/d/1s7uE8zx4w2lGx1F_6yNItPKtirNkZalifNAcoKHS_Js/pub?w=711&h=577" />
+                    How to move, insert, delete, copy nodes in the DOM
+
+
+
+                </script>
+			</section>
+
+             <section class="noborderimages" data-markdown>
+                <script type="text/template">
+                    ## Manipulation of the DOM
+                    * Adding nodes
+                      * node.appendChild(newNode)
+                        * Adds or moves
+                      * node.insertBefore(newNode, beforeNode)
+                    * Replacing nodes
+                      * node.replaceChild(newNode, oldNode)
+                    * Removing nodes
+                      * node.removeChild(oldNode)
+                    * Making clones
+                      * node.cloneNode(bool) 
+                        * true makes a deep copy
+
+                </script>
+            </section>
+
+            <!-- Creating nodes -->
+			<section data-markdown>
+                <script type="text/template">
+                    ## Creating nodes
+
+                    * document.createElement - Create a new <span style="border: 3px solid yellow">ELEMENT_NODE</span>
+                    * document.createTextNode - Create a new <span style="border: 3px solid blue">TEXT_NODE</span>
+
+                    ```javascript
+                    var newTag = document.createElement("p");
+                    var newText = document.createTextNode("Cool text!");
+
+                    newTag.appendChild(newText);
+
+                    document.querySelector("#main").appendChild(newTag);
+
+                    ```
+                </script>
+			</section>
+
+
+            <!-- innerHTML -->
+            <section data-markdown>
+                <script type="text/template">
+                    ## Shortcuts
+
+                    * textConent
+                      * Creates one new TEXT_NODE
+                      * Removes all children from element
+
+                    ```javascript
+                        element.textContent = "Text...";
+                    ```
+
+                    * innerHTML
+                      * Parses the string
+                      * Creates elements and text nodes 
+                      * Removes all children from element
+                      * Less secure. Use textContent!
+                       
+                    ```javascript
+                        element.innerHTML = "<p>Some text</p>";
+                    ```
+
+                    
+                </script>
+            </section>
+
+             <section class="noborderimages" data-markdown>
+                <script type="text/template">
+                    ## Attributes
+                    
+                    * getAttribute("attribute name")
+                    * setAttribute("attribute name", value)
+                    * removeAttribute("attribute name")
+
+                    ```javascript
+                    var newTag = document.createElement("img");
+                    
+                    newTag.setAttribute("src", "image/picture.svg");
+
+                    // The browser fetches and caches the "picture.svg"
+
+                    document.querySelector("#main").appendChild(newTag);
+
+                    ```
+                </script>
+            </section>
+
+            <section class="noborderimages" data-markdown>
+                <script type="text/template">
+                    ## Styles
+                    
+                    ```javascript
+                    var node = document.querySelector("#discovery");
+
+                    node.style.color = "#AA5698";
+                    ```
+
+                    ```html
+                    <p id="discovery" style="color: #AA5698">Hello</p>
+                    ```
+                    
+
+                    | CSS Property | Identifier |
+                    | :----------- | :--------- |
+                    | font-size    | fontSize   |
+                    | margin-left  | marginLeft |
+                    | ...          | ...        |
+                    | float        | cssFloat   |
+                    
+                </script>
+            </section>
+
+            <section class="noborderimages" data-markdown>
+                <script type="text/template">
+                    ## Styles
+
+                    |         |            |   | 
+                    | :-------------: |:-------------:| :-----:|
+                    | ![](../images/html64p.png) | .html | Structure |
+                    | ![](../images/css64g.png) | .css      |    Presentation | 
+                    | ![](../images/js64y.png)    | .js | Behavior |
+
+                    Avoid putting your css in the .js-file, use classes instead!
+
+                    Exception: Properties that change dynamically
+                    ```javascript
+                    ...
+
+                    movingElement.style.left = x + "px";
+                    movingElement.style.top = y + "px";
+                    
+                    ...
+                    ```
+                    
+                </script>
+            </section>
+
+
+            <section class="noborderimages" data-markdown>
+                <script type="text/template">
+                    ## Use classes instead
+
+                    <span class="lnu source">.js</span>
+                    ```javascript
+                    var node = document.querySelector("#discovery");
+
+                    node.classList.add("jschanged");
+
+                    ```
+                    <span class="lnu source">.html</span>
+
+                    ```html
+                    <p id="discovery" class="whatever jschanged">Hello</p>
+                    ```
+
+                    <span class="lnu source">.css</span>
+                    ```css
+                    .jschanged {
+                        color: #AA5698;
+                    }
+                    ```
+                    
+                    * classList.add, classList.remove, classList.toggle, classList.contains
+                    
+                </script>
+            </section>
+
+            <section class="noborderimages" data-markdown>
+                <script type="text/template">
+                    ## Write HTML in JS?
+
+                    <span class="lnu source">.js</span>
+                    ```javascript
+                    var p = document.createElement("p");
+                    p.classList.add("post");
+                    var ul = document.createElement("ul");
+                    var li1 = document.createElement("li");
+                    var li2 = document.createElement("li");
+                    li1.classList.add("active");
+                    var a1 = document.createElement("a");
+                    a1.setAttribute("href", "#");
+                    var text1 = document.createTextNode("The first link");
+                    a1.appendChild(text1);
+                    var a2 = document.createElement("a");
+                    a2.setAttribute("href", "#");
+                    var text2 = document.createTextNode("The second link");
+                    a2.appendChild(text2);
+                    li1.appendChild(a1);
+                    li2.appendChild(a2);
+                    ul.appendChild(li1);
+                    ul.appendChild(li2);
+                    p.appendChild(ul);
+                    document.querySelector("body").appendChild(p);
+
+                    ```
+                    
+
+                </script>
+            </section>
+
+            <section class="noborderimages" data-markdown>
+                <script type="text/template">
+                    ## Templates
+
+                    <span class="lnu source">.html</span>
+                    ```html
+                    <template id="post-template">
+                        <p class="post">
+                            <ul>
+                                <li class="active">
+                                    <a href="#">The first link</a>
+                                </li>
+                                <li>
+                                    <a href="#">The second link</a>
+                                </li>
+                            </ul>
+                        </p>
+                    </template>
+
+                    ```
+
+                    <span class="lnu source">.js</span>
+                    ```javascript
+                    var template = document.querySelector('#post-template');
+                    var clone = document.importNode(template.content, true);
+                    document.querySelector("body").appendChild(clone);
+                    ```
+                    
+                    Mustache, Underscore Templates, HandlebarsJS, Jade....
+                </script>
+            </section>
+
+		</section>
+
+        <!-- Event -->
+        <section>
+
+            <section class="noborderimages" data-markdown>
+                <script type="text/template">
+                ## Event
+
+                ![](https://docs.google.com/drawings/d/1yNMiWNttvEAd5CApyUHqU-aNuXa8ij4qrlS8kLqicQo/pub?w=1307&h=699)
+                </script>
+            </section>
+        
+            <section class="noborderimages" data-markdown>
+                <script type="text/template">
+                ## Event
+
+                * User initialized
+                  * Mouse, scrolling, keyboard ...
+                * Browser initialized
+                  * Page loaded, DOM Changed ...
+                * Network
+                  * Content loaded ...
+
+                </script>
+            </section>
+
+            <section class="noborderimages" data-markdown>
+                <script type="text/template">
+                ## Anti-pattern
+
+                ```html
+                <a href="page.html" onclick="doSomething();">The link</a>
+                ```
+                </script>
+            </section>
+
+
+            <section class="noborderimages" data-markdown>
+                <script type="text/template">
+                ## Add event listeners
+
+                "When *this* happens do *that*"
+
+                ```javascript
+                var a = document.querySelector("#theatag");
+
+                a.addEventListener("click", buttonClicked);
+
+                function buttonClicked(event){
+                    console.log("You clicked the link!");
+                };
+
+                ```
+
+                ```javascript
+                var a = document.querySelector("#theatag");
+
+                a.addEventListener("click", function(event){
+                    console.log("You clicked the link!");
+                });
+
+                ```
+
+                </script>
+            </section>
+
+
+            <section class="noborderimages" data-markdown>
+                <script type="text/template">
+                ## Remove event listeners
+
+                using Named function expressions
+
+
+                ```javascript
+                var a = document.querySelector("#theatag");
+
+                a.addEventListener("click", function buttonClicked(event){
+                    console.log("You can only click me once!");
+
+                    a.removeEventListener("click", buttonClicked);
+                });
+
+                ```
+
+
+                </script>
+            </section>
+
+             <section class="noborderimages" data-markdown>
+                <script type="text/template">
+                ## Propagation
+
+                <img style="float:left; padding-right: 30px" src="https://docs.google.com/drawings/d/1erJ1Umamf8NOlH3VPRNJVGucIzHcYIX6T8oqnUiyr1k/pub?w=428&h=611" />
+
+                ```javascript
+                var a = document.querySelector("#atag");
+                var p = document.querySelector("#ptag");
+
+                a.addEventListener("click", function(event){
+                    console.log("You clicked the link!");
+
+                    event.stopPropagation();
+                });
+
+                p.addEventListener("click", function(event){
+                    console.log("Damn you a! I will not be called.");
+                });
+
+                ```
+
+                ```javascript
+                p.addEventListener("click", function(event){
+                    console.log("Hihi! Captured it!");
+                }, true);
+
+                ```
+                </script>
+            </section>
+            
+            <!-- What triggered the event? -->
+            <section class="noborderimages" data-markdown>
+                <script type="text/template">
+                ## What triggered the event?
+
+                Inside an event handler *this*<br>will reference the element <br>which triggered the event.
+                ```javascript
+                var a = document.querySelector("#atag");
+
+                a.addEventListener("click", function(event){
+                    a === this;             // true
+                    a === event.target;     // true
+                    this === event.target;  // true
+                });
+                ```
+                </script>
+            </section>
+
+            <!-- Event and for-loop -->
+            <section class="noborderimages" data-markdown>
+                <script type="text/template">
+                ## What triggered the event?
+                
+                Closures can cause headache
+
+                ```html
+                <div id="links">
+                    <a href="#">The first link</a>
+                    <a href="#">The second link</a>
+                    <a href="#">The third link</a>
+                    <a href="#">The forth link</a>
+                </div>
+                ```
+
+                ```javascript
+                var aTags = document.querySelectorAll("#links a");
+
+                for(var i = 0 ; i < aTags.length; i += 1){
+                    aTags[i].addEventListener("click", function(event){
+                        console.log("Clicked link ", i);  // 4
+                        console.log(this.textContent);  // Correct
+                        console.log(event.target.textContent); // Correct
+                    
+                    });
+                }
+                ```
+
+                <span class="lnu source">https://jsfiddle.net/Leitet/j0umya0d/</span>
+
+
+                </script>
+            </section>
+
+            <!-- Event and forEach -->
+            <section class="noborderimages" data-markdown>
+                <script type="text/template">
+                ## What triggered the event?
+                
+                Functions ftw, or?
+
+                ```html
+                <div id="links">
+                    <a href="#">The first link</a>
+                    <a href="#">The second link</a>
+                    <a href="#">The third link</a>
+                    <a href="#">The forth link</a>
+                </div>
+                ```
+
+                ```javascript
+                var aTags = document.querySelectorAll("#links a");
+
+                Array.prototype.forEach.call(aTags, function(a){
+                    a.addEventListener("click", function(event){
+                        console.log(a.textContent); // Correct
+                        console.log(this.textContent); // Correct
+                        console.log(event.target.textContent); // Correct
+                    });
+                });
+                ```
+
+                <span class="lnu source">https://jsfiddle.net/Leitet/j0umya0d/</span>
+
+
+                </script>
+            </section>
+
+            <!-- Event delegation -->
+            <section class="noborderimages" data-markdown>
+                <script type="text/template">
+                ## Event delegation
+                Add one listener instead of four
+
+                ```html
+                <div id="links">
+                    <a href="#">The first link</a>
+                    <a href="#">The second link</a>
+                    <a href="#">The third link</a>
+                    <a href="#">The forth link</a>
+                </div>
+                ```
+
+                ```javascript
+                var div = document.querySelectorAll("#links");
+
+                div.addEventListener("click", function(event){
+                        console.log(this.textContent); // "The first link" "The second....
+                        console.log(event.target.textContent); // "The first link"
+
+                        this === div; //true
+                        this === event.currentTarget; // true
+                });
+                ```
+
+                <span class="lnu source">https://jsfiddle.net/Leitet/j0umya0d/</span>
+
+
+                </script>
+            </section>
+
+            <!-- .bind() -->
+            <section class="noborderimages" data-markdown>
+                <script type="text/template">
+                ## .bind()
+
+                ```javascript
+                var Something = function(element) {
+                    this.name = 'Something Good';
+                
+                    this.onclick1 = function(event) {
+                        console.log(this.name); // undefined, as this is the element
+                    };
+                    this.onclick2 = function(event) {
+                        console.log(this.name); // 'Something Good', as this is the binded Something object
+                    };
+
+                    element.addEventListener('click', this.onclick1, false);
+                    element.addEventListener('click', this.onclick2.bind(this), false);
+                }
+                ```
+                * Problem:
+                  * You can not remove the event listener beacuse bind creates a new function
+
+                <p class="lnu source">https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener</p>
+                <p class="lnu source">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind<p>
+                </script>
+            </section>
+
+            <!-- preventDefault -->
+            <section class="noborderimages" data-markdown>
+                <script type="text/template">
+                ## Stop the default action
+                
+                ```javascript
+                var a = document.querySelector("#atag");
+
+                a.addEventListener("click", function(event){
+                    console.log("I got this. Don´t activate the link!");
+                    event.preventDefault();
+
+                });
+                ```
+
+                Another alternative is to *return false* from the listener.
+                </script>
+            </section>
+
+            <!-- preventDefault -->
+            <section class="noborderimages" data-markdown>
+                <script type="text/template">
+                ## Timers
+                Timeout:
+                ```javascript
+                var timer = setTimeout(function(){
+                    console.log("At least 3 seconds passed..");
+
+                }, 3000);
+                ```
+
+                ```javascript
+                clearTimeout(timer); // Stops the timer
+                ```
+                *************
+                Interval:
+                ```javascript
+                var timer = setInterval(function(){
+                    console.log("At least 3 seconds passed..");
+                }, 3000);
+                ```
+
+                ```javascript
+                clearInterval(timer); // Stops the interval
+                ```
+                </script>
+            </section>
+
+           
+
+            <section class="noborderimages" data-markdown>
+                <script type="text/template">
+                ## Next lecture
+                
+                * The event loop
+                * Asynchronous vs. Synchronous
+                * Blocking vs. nonblocking
+                * AJAX (xmlhttprequest)
+                * JSON
+
+                </script>
+            </section>
+
+        </section>
+		   
+
+        </div>
+    </div>
+
+    <script src="../reveal.js/lib/js/head.min.js"></script>
+    <script src="../reveal.js/js/reveal.js"></script>
+
+    <script>
+        // Full list of configuration options available at:
+        // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            width: 1280,
+            height: 800,
+            controls: true,
+            progress: true,
+            history: true,
+            center: false,
+
+            transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+            // Optional reveal.js plugins
+            dependencies: [
+                { src: '../reveal.js/lib/js/classList.js', condition: function () { return !document.body.classList; } },
+                { src: '../reveal.js/plugin/markdown/marked.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+                { src: '../reveal.js/plugin/markdown/markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+                { src: '../reveal.js/plugin/highlight/highlight.js', async: true, condition: function () { return !!document.querySelector('pre code'); }, callback: function () { hljs.initHighlightingOnLoad(); } },
+                { src: '../reveal.js/plugin/zoom-js/zoom.js', async: true },
+                { src: '../reveal.js/plugin/notes/notes.js', async: true }
+            ]
+        });
+
+    </script>
+
+</body>
+</html>
