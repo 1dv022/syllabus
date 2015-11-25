@@ -84,5 +84,5 @@ Get started by watchning this recording:
 | Lectures| <= L03 |
 | Keywords| DOM, style manipulation, event, timers|
 | Readme | [Instructions](https://github.com/1dv022/exercise/blob/memory/exercise/memory/README.md)|
-| Solutions | Code<br>Extended recording to come|
+| Solutions | Code<br>[Extended recording](https://youtu.be/8Mt0Buk3rK0)|
 
