@@ -1,6 +1,6 @@
 // Router
 var ul = document.querySelector("#links");
-var baseUrl = "/example/pushstate/";
+var baseUrl = "https://rawgit.com/1dv022/syllabus/master/lectures/05/example/pushstate/";
 
 ul.addEventListener("click", function(event){
 	event.preventDefault();
@@ -12,7 +12,7 @@ ul.addEventListener("click", function(event){
 
 	history.pushState(stateObj, 
 		"Account information: "+stateObj.account, 
-		baseUrl+"/account/"+stateObj.accountnbr);
+		baseUrl+"account/"+stateObj.accountnbr);
 	
 	// Load accountinformation and show it
 	console.log(stateObj);
