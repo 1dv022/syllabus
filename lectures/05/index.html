@@ -1,0 +1,547 @@
+<!doctype html>
+<html lang="sv-se">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>04 - Lecture - Client-based web programming (1DV022)</title>
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <link rel="icon" href="../images/favicon.png" type="image/png" />
+
+    <link rel="stylesheet" href="../reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="../reveal.js/css/theme/black.css" id="theme">
+    <link rel="stylesheet" href="../reveal.js/css/theme/black.lnu.css" id="theme">
+
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="../reveal.js/lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div class="reveal lnu">
+
+        <!-- Any section element inside of this container is displayed as a slide -->
+        <div class="slides">
+            <!-- Start -->
+            <section class="center" data-state="lnu-intro">
+                <h3>Client-based Web Programming</h3>
+                <h3>(1DV022)</h3>
+                <h1>Lecture 05</h1>
+                <div class="lnu-footer">
+                    <img src="../images/lnu-logotype.png" />
+                    <img src="../images/lnu-symbol.png" />
+                </div>
+            </section>
+
+            <!-- CC -->
+            <section data-state="lnu-cc">
+                <h2>Licence for this work</h2>
+                <p>
+                    This work is produced by Johan Leitet for the course Client-based Web Programming (1DV022) at Linnaeus University.
+                </p>
+                <p>All content in this work excluding photographs, icons, picture of course litterature and Linnaeus University logotype and symbol, is licensied under a
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a><br />Creative Commons Attribution 4.0 International License</a>.</p>
+                <h4>You are free to </h4>
+                <ul>
+                    <li>copy and redistribute the material in any medium or format</li>
+                    <li>spread the whole or parts of the content</li>
+                    <li>show the whole or parts of the content publicly and digital</li>
+                    <li>convert the content to another format</li>
+                    <li>change the content</li>
+                </ul>
+                <p>
+                    If you change the content do not use the photographs, icons, picture of the course literature or Linnaeus University logotype and symbol in your new work!
+                </p>
+                <p>
+                    At all times you must give credit to: ”Linnaeus university – Client-based Web Programming (1DV022)” with the link https://coursepress.lnu.se/kurs/klientbaserad-webbprogrammering/ and to the Creative Common-license above.
+                </p>
+                <p>
+                  Special credits:
+                  * Server by Mister Pixel from the Noun Project
+                  * Browser by Fabiano Coelho from the Noun Project
+                </p>
+            </section>
+
+            <!-- Content -->
+            <section data-markdown>
+                <script type="text/template">
+                ## Content
+
+                * SPA
+                * Offline
+
+                </script>
+                <pre><code></code></pre> <!-- Fix for color coding in md -->
+            </section>
+
+
+            <!-- SPA -->
+            <section>
+                 <!-- Webpage/Webapplication -->
+                <section class="noborderimages" data-markdown>
+                    <script type="text/template">
+                    ##Web app vs. Web site
+
+                    Web site
+                    * Often informational
+                    * Can have embedded web applications
+                    * Ex. barometern.se
+                    
+                    Web application
+                    * Focus on user interaction
+                    * Ex. drive.google.com
+
+                    </script>
+                </section>
+
+                <section class="noborderimages" data-markdown>
+                    <script type="text/template">
+                    SPA
+
+                    Single Page Application
+                    > A single-page application (SPA) is a web application or web site that fits on a single web page with the goal of providing a more fluid user experience akin to a desktop application. --Wikipedia
+                    </script>
+                </section>
+
+                <section class="noborderimages" data-markdown>
+                    <script type="text/template">
+                    ##Key concepts
+
+                    * Server communication
+                    * Manage history
+                    * Offline support
+                    * Search engine optimization
+
+                    </script>
+                </section>
+
+                <!-- window.location -->
+                <section class="noborderimages" data-markdown>
+                    <script type="text/template">
+                    ## window.location
+
+                    ```
+                    http://www.test.com:8080/index.html?id=1432&name=Tim#anchor
+                    ```
+
+                    ```javascript
+                    location.hash       // #anchor
+                    location.host       // www.test.com
+                    location.hostname   // www.test.com:8080
+                    location.href       // http://www.test.com:8080/index.html?id=1432&name=Tim#anchor
+                    location.pathname   // /index.html
+                    location.port       // 8080
+                    location.protocol   // http:
+                    location.search     // ?id=1432&name=Tim
+
+                    ```
+
+                    </script>
+                </section>
+
+
+                <!-- The Back Button -->
+                <section class="noborderimages" data-markdown>
+                    <script type="text/template">
+                    ## Managing the back/forward button
+
+                    Fragment identifier routing.
+
+                    ```html
+                        <a href="#!/account/47435675">Account 1 details</a>
+                        <a href="#!/account/65443234">Account 2 details</a>
+                        <a href="#!/account/12675334">Account 3 details</a>
+                    ```
+
+                    ```JavaScript
+                        // Router
+                        window.addEventListener("hashchange", function(event){
+                            var hash = event.target.location.hash; // #!/account/47435675
+
+                            if(hash.substr(2,9) === "/account/"){
+                                var account = hash.substr(11); //47435675
+
+                                // Fetch account information from server
+                                // Display account information
+                            }
+                        });
+                    ```
+                    <a href="example/index.html" target="_blank">Run</a>
+
+                    </script>
+                </section>
+
+                <!-- Sync / Async -->
+                <section class="noborderimages" data-markdown>
+                    <script type="text/template">
+                    ## History in the browser
+
+                    * window.history
+                      * .back()
+                      * .forward()
+                      * .go(-3)
+                      * .length
+
+                    ```JavaScript
+                    window.history.back();
+                    ```
+
+                    </script>
+                </section>
+
+                <!-- Push state -->
+                <section class="noborderimages" data-markdown>
+                    <script type="text/template">
+                    ## pushState
+                    Lets us modify the historyobject and location url
+
+                    ```html
+                    <ul id="links">
+                        <li><a href="#!/account/47435675" data-account-title="Account 1" data-account="47435675">Account 1 details</a></li>
+                        <li><a href="#!/account/65443234" data-account-title="Account 2" data-account="65443234">Account 2 details</a></li>
+                        <li><a href="#!/account/12675334" data-account-title="Account 3" data-account="12675334">Account 3 details</a></li>
+                    </ul>
+                    ```
+
+
+                    ```JavaScript
+                    var ul = document.querySelector("#links");
+
+                    ul.addEventListener("click", function(event){
+                      event.preventDefault();
+
+                      var stateObj =  { 
+                        accountnbr: event.target.getAttribute("data-account"),
+                        account: event.target.getAttribute("data-account-title")
+                      }
+
+                      history.pushState(stateObj, "Account information: "+stateObj.account, 
+                        "/account/"+stateObj.accountnbr);
+                      
+                      // Load accountinformation and show it
+                      console.log(stateObj);
+                    });
+
+                    ```
+
+                    <a href="example/pushstate/index.html" target="_blank">Run</a>
+                    </script>
+                </section>
+                
+                <section class="noborderimages" data-markdown>
+                    <script type="text/template">
+                    ## pushState
+                    Popping the state
+
+
+                    ```JavaScript
+                    window.addEventListener("popstate", function(event){
+
+                      // When an old state is triggered. 
+                      console.log(event.state.account + " with account number " + event.state.accountnbr);
+
+                    });
+
+                    ```
+                    Reading current state
+                    ```JavaScript
+                    var currentState = history.state;
+                    ```
+                    </script>
+                </section>
+
+                 <section class="noborderimages" data-markdown>
+                    <script type="text/template">
+                    ## Cache
+                    <br><br>
+                    Do we always need to load fresh data?
+                    </script>
+                </section>
+
+                <section class="noborderimages" data-markdown>
+                   <script type="text/template">
+                   ## Client side frameworks
+                   ![](https://raw.githubusercontent.com/angular/angular.js/master/images/logo/AngularJS.exports/AngularJS-medium.png)<br />
+                   ![](http://www.gravatar.com/avatar/0cf15665a9146ba852bf042b0652780a?s=200)<br />
+                   ![](https://camo.githubusercontent.com/1f7aaa4af03e21d7131c9191605aab6019560ef3/687474703a2f2f6465762e746f7068656d616e2e636f6d2f77702d636f6e74656e742f75706c6f6164732f323031352f30342f6c6f676f2d72656163746a732e706e67)<br>
+
+                   </script>
+               </section>
+
+
+
+            </section>
+
+            <!-- WS -->
+            <section>
+
+                <section class="noborderimages" data-markdown>
+                    <script type="text/template">
+                    ## Fetching data in a SPA
+
+                    XHR is not optimal for real time applications like:
+                    * Games
+                    * Chat applications
+                    * Stock broker services
+                    * Real time communication
+                    </script>
+                </section>
+
+                <section class="noborderimages" data-markdown>
+                    <script type="text/template">
+                    ## XHR, HTTP
+
+                    ![](https://docs.google.com/drawings/d/1V1G6aZ9FRkQ0xCRITYNmh-iDA2xM5csq5hjvFz8B_4M/pub?w=1442&h=625)
+
+                    </script>
+                </section>
+
+                <section class="noborderimages" data-markdown>
+                    <script type="text/template">
+                    ## Web Sockets
+
+                    ![](https://docs.google.com/drawings/d/1PTilmKD8RfohbWaHX7Mc2KTUrDODxeDZuSc358rrvgk/pub?w=1433&h=515)
+
+                    </script>
+                </section>
+
+                <section class="noborderimages" data-markdown>
+                    <script type="text/template">
+                    ## Web Sockets
+
+                    ```javascript
+                    var socket = new WebSocket("ws://www.example.com/socketserver", "charcords");
+                    var data = {x: 12, y: 14};
+
+                    socket.addEventListener("open", function (event) {
+                      socket.send(JSON.stringify(data));
+                    });
+
+                    socket.addEventListener("message", function (event) {
+                      console.log(event.data);
+                    });
+                    ```
+
+                    ```javascript
+                    socket.close();
+                    ```
+                    To come: Exercise - Instachat
+
+                  </script>
+                </section>
+            </section> <!-- End Sockets -->
+
+            <!-- Offline first -->
+            <section>
+                   <section class="noborderimages" data-markdown>
+                      <script type="text/template">
+                      ## Offline web applications
+
+
+
+                      </script>
+                  </section>
+
+
+                  <section class="noborderimages" data-markdown>
+                     <script type="text/template">
+                     ## Offline web applications
+
+                     * Graceful degradation
+                     * Progressive Enhancement
+
+                     </script>
+                 </section>
+
+                 <section class="noborderimages" data-markdown>
+                    <script type="text/template">
+                    ## Offline first
+
+                    >Stop treating a lack of connectivity like an error. Your app should be able to handle disconnections and get on with business as gracefully as possible. 
+                    
+                    Alex Feyerke http://alistapart.com/article/offline-first
+
+                    </script>
+                </section>
+
+                <section class="noborderimages" data-markdown>
+                   <script type="text/template">
+                   ## Problems to solve
+
+                   * How to know if the user is online?
+                   * How to cache resources in the browser?
+                   * How to inform the user
+                   * How to handle data on client
+                   * How to sync data to server
+                   * How to handle conflicts
+
+                   </script>
+               </section>
+
+               <section class="noborderimages" data-markdown>
+                  <script type="text/template">
+                  ## Online / Offline
+
+                  ```javascript
+                  if(window.navigator.onLine){
+                    console.log("You are online! Or.....?");
+                  }
+
+                  windows.addEventListener("online", function{
+                    console.log("Online?");
+                  });
+
+                  windows.addEventListener("offline", function{
+                    console.log("Offline?");
+                  });
+
+                  ```
+                  It is not that simple.... :(
+
+
+                  [offline.js](http://github.hubspot.com/offline/docs/welcome/)
+                  </script>
+              </section>
+
+              <section class="noborderimages" data-markdown>
+                 <script type="text/template">
+                 ## Application cache / App Cache
+
+                 Was supposed to be the standard for offline web applications.
+                 Deprecated
+
+                 ```javascript
+                  CACHE MANIFEST
+                  # v1 2011-08-14
+                  # This is another comment
+                  index.html
+                  cache.html
+                  style.css
+                  image1.png
+
+                  # Use from network if available
+                  NETWORK:
+                  network.html
+
+                  # Fallback content
+                  FALLBACK:
+                  / fallback.html
+
+                 ```
+
+                 http://alistapart.com/article/application-cache-is-a-douchebag
+                 </script>
+
+
+             </section>
+
+             <section class="noborderimages" data-markdown>
+                <script type="text/template">
+                ## Service Workers
+
+                ![](https://docs.google.com/drawings/d/1D_3574TMPRRSsga8dPJ7IJsn2OzzqAaaHY7QlXmsqEw/pub?w=1411&h=838)
+
+              </script>
+            </section>
+
+            <section class="noborderimages" data-markdown>
+                <script type="text/template">
+                ## Service Workers
+
+                ![](https://docs.google.com/drawings/d/1-XJtbiB5ijoWBraJJxPZ-OHZ295uqas024_XzmL5GoM/pub?w=1079&h=928)
+
+              </script>
+            </section>
+
+            <section class="noborderimages" data-markdown>
+                <script type="text/template">
+                ## Note
+
+                When working with service workers.
+                * Requires https (not under localhost)
+                * Only asynchronus calls are premitted in the service worker
+                * Makes heavy use of promises
+                * Compatibility problems in 2015 (Chrome only)
+                
+
+              </script>
+            </section>
+
+            <section class="noborderimages" data-markdown>
+                <script type="text/template">
+                ## Service Workers lifetime
+
+                * Registrer a service worker
+                * Listen for "install"
+                  * Cache resources using [`caches`](https://developer.mozilla.org/en-US/docs/Web/API/Cache)
+                * Listen for "fetch"
+                  *  If in cache return cache, else fetch, add to cache and return
+              </script>
+            </section>
+
+            <section class="noborderimages" data-markdown>
+               <script type="text/template">
+               ## Offline first. Always?
+               <br><br><br>
+               > Do a chat application need to be "offline first"?
+
+             </script>
+           </section>
+
+
+            </section>
+
+
+        </div>
+    </div>
+
+    <script src="../reveal.js/lib/js/head.min.js"></script>
+    <script src="../reveal.js/js/reveal.js"></script>
+
+    <script>
+        // Full list of configuration options available at:
+        // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            width: 1280,
+            height: 800,
+            controls: true,
+            progress: true,
+            history: true,
+            center: false,
+
+            transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+            // Optional reveal.js plugins
+            dependencies: [
+                { src: '../reveal.js/lib/js/classList.js', condition: function () { return !document.body.classList; } },
+                { src: '../reveal.js/plugin/markdown/marked.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+                { src: '../reveal.js/plugin/markdown/markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+                { src: '../reveal.js/plugin/highlight/highlight.js', async: true, condition: function () { return !!document.querySelector('pre code'); }, callback: function () { hljs.initHighlightingOnLoad(); } },
+                { src: '../reveal.js/plugin/zoom-js/zoom.js', async: true },
+                { src: '../reveal.js/plugin/notes/notes.js', async: true }
+            ]
+        });
+
+    </script>
+
+</body>
+</html>
