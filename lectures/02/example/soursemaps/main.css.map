@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAAA,IAAK;EAAE,MAAM,EAAE,CAAC;;ACAhB,GAAI;EACH,KAAK,EAAE,IAAI",
-"sources": ["_reset.scss","mobile.scss"],
-"names": [],
-"file": "main.css"
-}
