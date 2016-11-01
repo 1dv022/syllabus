@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
 
-    <title>01 - Lecture - Client-based web programming (1DV022)</title>
+    <title>CSS Preprocessors and static site generators - Client-based web programming (1DV022)</title>
 
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -45,7 +45,8 @@
             <section class="center" data-state="lnu-intro">
                 <h3>Client-based Web Programming</h3>
                 <h3>(1DV022)</h3>
-                <h1>Lecture 01</h1>
+                <h1>CSS Preprocessors</h1>
+                <h1>Static Site generators</h1>
                 <div class="lnu-footer">
                     <img src="../images/lnu-logotype.png" />
                     <img src="../images/lnu-symbol.png" />
@@ -58,7 +59,7 @@
                 <p>
                     This work is produced by Johan Leitet for the course Client-based Web Programming (1DV022) at Linnaeus University.
                 </p>
-                <p>All content in this work excluding photographs, icons, picture of course litterature and Linnaeus University logotype and symbol, is licensied under a 
+                <p>All content in this work excluding photographs, icons, picture of course litterature and Linnaeus University logotype and symbol, is licensied under a
                 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a><br />Creative Commons Attribution 4.0 International License</a>.</p>
                 <h4>You are free to </h4>
                 <ul>
@@ -77,12 +78,12 @@
             </section>
 
             <!-- CSS Preprocessors -->
-            
+
                 <!-- What is? -->
                 <section>
                     <h2>CSS Preprocessors</h2>
                     A CSS Preprocessor is a set of rules<br>
-                    that lets you extend the css-language<br> 
+                    that lets you extend the css-language<br>
                     with some usable parts. The extended <br>
                     css is transformed to regular css using <br>
                     the preprocessor.
@@ -100,9 +101,9 @@
                          * Separate in files
                          * Use mixins
                         * Use variables!
-                    
+
                     </script>
-                    <pre><code></code></pre> 
+                    <pre><code></code></pre>
                 </section>
                 <!-- Which? -->
                 <section data-markdown>
@@ -112,14 +113,15 @@
                         * [sass](http://sass-lang.com)
                         * [less](http://lesscss.org)
                         * [stylus](https://learnboost.github.io/stylus/)
+                        * [...](https://www.google.se/search?q=list%20of%20css%20preprocessors&rct=j)
 
                         <br><br>
-                        * We will default to sass in this course,<br> 
-                        but you are free to choose another <br>preprocessor if you like. 
+                        * We will default to sass in this course,<br>
+                        but you are free to choose another <br>preprocessor if you like.
 
-                    
+
                     </script>
-                    
+
                 </section>
                 <!-- Common features -->
                 <section>
@@ -135,7 +137,7 @@
                             * @import
                             * Operators
                             * ...
-                                               
+
                         </script>
                     </section>
 
@@ -143,12 +145,12 @@
                     <section data-markdown>
                         <script type="text/template">
                             ## Variables
-                            
+
                             * How about not needing to repeat the same value over and over again?
 
                             <p class="lnu source">scss:</p>
 
-                            ```scss 
+                            ```scss
                                 $font-stack:    Helvetica, sans-serif;
                                 $primary-color: #333;
 
@@ -156,18 +158,18 @@
                                   font: 100% $font-stack;
                                   color: $primary-color;
                                 }
-                            ```    
+                            ```
 
                             <p class="lnu source">css:</p>
 
-                            ```css 
+                            ```css
                                 body {
                                   font: 100% Helvetica, sans-serif;
-                                  color: #333; 
+                                  color: #333;
                               }
-                            ```     
+                            ```
                             <p class="lnu source">http://sass-lang.com/guide</p>
-                            
+
                         </script>
                     </section>
 
@@ -175,34 +177,34 @@
                     <section data-markdown>
                         <script type="text/template">
                             ## Nesting
-                            
+
                             * Nest your css selectors in the same manner as your html
 
                             <p class="lnu source">scss:</p>
 
-                            ```scss 
-                                nav { 
+                            ```scss
+                                nav {
                                     ul { margin: 0; padding: 0; list-style: none; }
 
                                     li { display: inline-block; }
 
-                                    a { display: block; 
-                                        padding: 6px 12px; 
+                                    a { display: block;
+                                        padding: 6px 12px;
                                         text-decoration: none;
-                                    } 
+                                    }
                                 }
-                            ```   
-                            
+                            ```
+
                             <p class="lnu source">css:</p>
-                            
-                            ```scss 
+
+                            ```scss
                                 nav ul { margin: 0; padding: 0; list-style: none; }
                                 nav li { display: inline-block; }
-                                nav a { display: block; 
+                                nav a { display: block;
                                         padding: 6px 12px; text-decoration: none; }
-                            ```     
+                            ```
                             <p class="lnu source">http://sass-lang.com/guide</p>
-                            
+
                         </script>
                     </section>
 
@@ -210,34 +212,34 @@
                     <section data-markdown>
                         <script type="text/template">
                             ## Mixins
-                            
+
                             * DRY css
 
                             <p class="lnu source">scss:</p>
 
-                            ```scss 
-                                @mixin border-radius($radius) { 
-                                    -webkit-border-radius: $radius; 
-                                    -moz-border-radius: $radius; 
-                                    -ms-border-radius: $radius; 
-                                    border-radius: $radius; 
+                            ```scss
+                                @mixin border-radius($radius) {
+                                    -webkit-border-radius: $radius;
+                                    -moz-border-radius: $radius;
+                                    -ms-border-radius: $radius;
+                                    border-radius: $radius;
                                 }
 
                                 .box { @include border-radius(10px); }
-                            ```   
-                            
+                            ```
+
                             <p class="lnu source">css:</p>
-                            
-                            ```css 
+
+                            ```css
                                 .box {
                                   -webkit-border-radius: 10px;
                                   -moz-border-radius: 10px;
                                   -ms-border-radius: 10px;
-                                  border-radius: 10px; 
+                                  border-radius: 10px;
                                 }
-                            ```     
+                            ```
                             <p class="lnu source">http://sass-lang.com/guide</p>
-                            
+
                         </script>
                     </section>
 
@@ -245,29 +247,29 @@
                     <section data-markdown>
                         <script type="text/template">
                             ## Partials and @import
-                            
+
                             * Minimize http calls
 
                             <p class="lnu source">scss:</p>
 
-                            ```scss 
+                            ```scss
                                 @import "css-file.css";
                                 @import "_reset";
                                 @import "mobile";
 
-                            ```   
-                            
+                            ```
+
                             <p class="lnu source">css:</p>
-                            
-                            ```css 
+
+                            ```css
                                 @import url(css-file.css);
-                                
+
                                 body { margin: 0; }
 
                                 div { width: 100%; }
-                            ```     
+                            ```
                             <p class="lnu source">http://sass-lang.com/guide</p>
-                            
+
                         </script>
                     </section>
 
@@ -275,12 +277,12 @@
                     <section data-markdown>
                         <script type="text/template">
                             ## Operators
-                            
+
                             * Calculations in your css (+ * / %)
 
                             <p class="lnu source">scss:</p>
 
-                            ```scss 
+                            ```scss
                                $width: 960px;
                                 .container { width: 100%; }
 
@@ -289,20 +291,20 @@
                                   width: 300px / $width * 100%;
                                 }
 
-                            ```   
-                            
+                            ```
+
                             <p class="lnu source">css:</p>
-                            
-                            ```css 
+
+                            ```css
                                .container { width: 100%; }
 
                                 aside[role="complimentary"] {
                                   float: right;
-                                  width: 31.25%; 
+                                  width: 31.25%;
                               }
-                            ```     
+                            ```
                             <p class="lnu source">http://sass-lang.com/guide</p>
-                            
+
                         </script>
                     </section>
                 </section>
@@ -318,7 +320,7 @@
                              * More tools
                              * More setup
                             * Building times increase
-                            * Save generated files in souce control? 
+                            * Save generated files in souce control?
 
 
 
@@ -342,25 +344,25 @@
                                 }
                             ```
                             * And a source-map comment in your css-file:
-                            
+
                             ```css
                                 ... css code here ...
 
                                 /*# sourceMappingURL=main.css.map */
                             ```
 
-                            * This will enable scss line debugging in the browser 
+                            * This will enable scss line debugging in the browser
                              * FF, Chrome, Safari, Edge
 
                         </script>
                     </section>
-                </section> 
-                <!-- How -->    
+                </section>
+                <!-- How -->
             </section>
 
             <!-- Static site generators -->
                 <!-- What is? -->
-                
+
 
                 <section data-markdown>
                     <script type="text/template">
@@ -370,7 +372,7 @@
 
                     <img id="gear2" style="border:0; background:none; transform: translate3d(71.63px, 119.67px, 0px) rotate(-40deg);" src="../images/gear2.svg" alt="gear">
                    <img id="gear1" style="border:0; background:none; transform: translate3d(71.63px, 119.67px, 0px) rotate(-40deg);" src="../images/gear1.svg" alt="gear">
-                   
+
                    <script>
                         var deg2 = 0;
                         var gear2 = document.getElementById("gear2");
@@ -406,7 +408,7 @@
 
                         <p class="lnu source">http://davidwalsh.name/introduction-static-site-generators</p>
 
-                    
+
                     </script>
                 </section>
                 <!-- Which? -->
@@ -427,7 +429,7 @@
                         <br><br>
                         * We will use [Jekyll](https://jekyllrb.com/) in this course hosting the site on [github-pages](https://pages.github.com/).
 
-                    
+
                     </script>
                 </section>
 
@@ -444,17 +446,17 @@
                              * Liquid for Jekyll
                             * Markdown (md) support
                             * ...
-                                               
+
                         </script>
                     </section>
                     <!-- Partials/includes -->
                     <section data-markdown>
                         <script type="text/template">
                             ## Partials/includes
-                            
+
                             <p class="lnu source">default.html</p>
 
-                            ```html 
+                            ```html
                                 <!DOCTYPE html>
                                 <html>
                                   {% include head.html %}
@@ -466,7 +468,7 @@
                                     {% include footer.html %}
                                   </body>
                                 </html>
-                            ``` 
+                            ```
                             * In Jekyll:
                              * Partials in folder "_includes"
 
@@ -476,11 +478,11 @@
                     <section data-markdown>
                         <script type="text/template">
                             ## Templates
-                            
+
                             * Simple markdown language often converted to HTML
                             <p class="lnu source">blogpage.html:</p>
 
-                            ```html 
+                            ```html
                                 <ul>
                                   {% for post in site.posts %}
                                     <li>
@@ -488,7 +490,7 @@
                                     </li>
                                   {% endfor %}
                                 </ul>
-                            ``` 
+                            ```
                             * In Jekyll:
                              * Liquid is the templating engine
                         </script>
@@ -497,22 +499,22 @@
                     <section data-markdown>
                         <script type="text/template">
                             ## Markdown (.md)
-                            
+
                             * Simple markdown language often converted to HTML
                             <p class="lnu source">.md:</p>
 
-                            ```markdown 
+                            ```markdown
                                 ##Header 2
-                                This is a normal paragraph. 
+                                This is a normal paragraph.
                                 ###Header 3
                                 1. This
                                 2. list is
                                  * nested
                                 3. and ordered
-                            ``` 
+                            ```
                             <p class="lnu source">html</p>
 
-                            ```html 
+                            ```html
                                 <h2>Header 2</h2>
                                 <p>This is a normal paragraph.</p>
                                 <h3>Header 3</h3>
@@ -523,13 +525,13 @@
                                     </li>
                                     <li>and ordered</li>
                                 </ol>
- 
-                            ```                             
-                            
+
+                            ```
+
                         </script>
                     </section>
                 </section>
-                <!-- Disadvantages --> 
+                <!-- Disadvantages -->
                 <!-- Disadvantages -->
 
                 <section data-markdown>
@@ -542,7 +544,7 @@
                           * no admin UI
                         * More complexity
                           * compared to static html
-                        * Tools needed to build 
+                        * Tools needed to build
                           * or hosting supporting the ssg
 
 
@@ -550,21 +552,21 @@
                     </script>
                 </section>
 
-                <!-- How -->    
+                <!-- How -->
                 <section data-markdown>
                     <script type="text/template">
                         ## Getting started:
 
                         * Install Jekyll
-                          * Requires Ruby, RubyGems, [Linux || Unix || OSX], NodeJS 
+                          * Requires Ruby, RubyGems, [Linux || Unix || OSX], NodeJS
                         * Create a new site
-                          * `~ $ jekyll new myblog
+                          * `~ $ jekyll new myblog`
                         * Edit the site
                         * build the site
-                         * cd myblog
-                         * ~/myblog $ jekyll serve
+                         * `cd myblog`
+                         * `~/myblog $ jekyll serve`
                         * Testa resultatet
-                         * http://localhost:4000 
+                         * http://localhost:4000
 
 
 
@@ -576,21 +578,22 @@
                         ## The first assignment in the course:
 
                         * Create a static site using Jekyll and sass
-                          * Req 1
-                          * Req 2
-                          * Req 3
+                          * All CSS should be generated from a CSS preprocessor
+                          * Visitors should be able to comment on your posts
+                          * You should use open graph for easy sharing on social media
+                          * [...](https://coursepress.lnu.se/kurs/klientbaserad-webbprogrammering/examination/exam-assignment-1/)
                         * We will use [Vagrant](https://www.vagrantup.com/)
                           * Easy set up
                           * Easy to run different projects
-                          * "No" polution of our computer 
+                          * "No" polution of our computer
 
-                        
+
                         https://github.com/1dv022/jekyll-boilerplate
-                        
+
 
                     </script>
                 </section>
-           
+
 
         </div>
     </div>
