@@ -2,20 +2,40 @@
 Make sure you have watched the introductory demos and resources:
 
 * [Getting started (resource)](https://coursepress.lnu.se/kurs/klientbaserad-webbprogrammering/resources/getting-started/)
-* [Starting out with the exercises (YouTube, SWE)](https://youtu.be/MY6LOgv3ZYk)
+* [Starting out with the exercises (YouTube)](https://youtu.be/2l8EpHhPDOk)
 
 
-## Exercises
-Exercises below are in seperate branches in the "exercise"-repo. Please watch the introduction above before continuing. In case you have multiple virtual machines running on you computer you may run in to problem doing `vagrant up`. In that case, please halt the other machines and try `vagrant up` again. 
+## Getting started
+Exercises are not mandantory and will not be corrected by the corse management. However, you will have a better chance of doing the examination assignments in the course if you first do the exercises. We higly recommend you to complete as many exercises as possible.
 
-To clean up you branch structure and remove old branches you can use the command:
+You have a git repo on Github named "xx222yy-exercises" where xx222yy is your lnu-username. You can use this repo for the exercises in the course. Start of by cloning the repo to your computer:
+* `git clone https://github.com/1dv525/xx222yy-exercises.git`
 
-```
-git remote update 1dv022 --prune
-```
+Now you can pull our boilerplate repo into your repo:
+* `git pull https://github.com/1dv525/exercise-boilerplate.git`
 
-The assignments are devided in to seperate levels, A, B and C where C is the most difficult level. You should always strive to complete at least level A and B.
+You are now ready to start with the exercises.
 
+## The exercises
+
+The exercises are devided in to seperate levels, A, B and C where C is the most difficult level. You should always strive to complete at least level A and B.
+
+1. Add the exercise/exercises you want to work on by doing a 
+ * `git subtree add --prefix={reponame} --squash {link to repo} master`. For example, to start with "tiny-tunes do": 
+ * `git subtree add --prefix=tiny-tunes --squash https://github.com/CS-LNU-Learning-Objects/exercise-tiny-tunes.git master`
+2. Navigate to the folder created. `cd tiny-tunes`
+3. Do a `npm install` to install the exercise dependencies. 
+2. Do `npm start`. The following will happen:
+  * A process will start watching files in the folder `src/` for changes. When a change is detected the file will be "compiled" in to a virtual file called "build.js". A web server is started which will serve your browser with the resources needed.
+3. Browse to [http://localhost:4000](http://localhost:4000) to locate the application.
+
+You should have multiple terminals open at the same time. One running the `npm start` and watching files and one terminal to do tasks like committing and pushing to GitHub. 
+
+## Local IDE
+1. Start up your IDE (Visual Studio Code) and open a new project pointing to the exercise or your exercise-folder. 
+2. Start editing your site in the `src`-folder. When you save a change look terminal watching your files. You should see that the files are rebuilt. 
+3. The webpage at [http://localhost:4000](http://localhost:4000) should be automaticly reloaded. If not, refresh the browser.
+4. When you debug your application you should to this in the browser, not in the IDE. A simple method is to write `debugger` in your js-source code where you want to stop the debugger and refresh the browser. Sourcemapping will make sure that linenumbers in the compiled-code matches your local version.
 
 ***
 
