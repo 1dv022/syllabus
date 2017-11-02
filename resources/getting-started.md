@@ -4,14 +4,14 @@ To get started with exercises and exam assignments in this course you should fol
 
 ##2. Version control using Git
 
-##3. Virtualization
+##3. Docker
 
-Please read up on what virtualization is and how we will use it in the course. [Resources/Virtualization](https://coursepress.lnu.se/kurs/klientbaserad-webbprogrammering/resources/virtualization/)
+Docker is used for the first assignment. 
+
 You should:
-* Install [Virtual Box](https://www.virtualbox.org/)
-* Install [Vagrant](https://www.vagrantup.com/)
+* Install [Docker](https://www.docker.com/)
 
 ##4. IDE (Integrated Development Environment)
-In this course several tools will be introduced to support a modern workflow. Though you sometimes will be forced to use some tools, the code editor will be your own choice. Demos etc. in the course may be recorded using different editors, however, recommended code editor is Webstorm.
+In this course several tools will be introduced to support a modern workflow. Though you sometimes will be forced to use some tools, the code editor will be your own choice. Demos etc. in the course may be recorded using different editors, however, recommended code editor is Visual Studio Code.
 
 ##5. GitHub and GitHub pages
