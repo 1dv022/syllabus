@@ -18,7 +18,8 @@ Make sure you have followed the "Getting started guide". If so you should alread
 * installed Node.js (together with npm)
 * installed Docker(https://www.docker.com/) (Latest Stable)
 
-### Installing Jekyll and tools using vagrant
+
+### Installing and running Jekyll
 
 * ~~[Recorded demo [Swedish]](https://youtu.be/KT8y18TMmFE)~~ Will be replaced
 
