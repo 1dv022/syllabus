@@ -9,10 +9,10 @@ Make sure you have watched the introductory demos and resources:
 Exercises are not mandantory and will not be corrected by the corse management. However, you will have a better chance of doing the examination assignments in the course if you first do the exercises. We higly recommend you to complete as many exercises as possible.
 
 You have a git repo on Github named "xx222yy-exercises" where xx222yy is your lnu-username. You can use this repo for the exercises in the course. Start of by cloning the repo to your computer:
-* `git clone https://github.com/1dv525/xx222yy-exercises.git`
+* `git clone https://github.com/1dv022/xx222yy-exercises.git`
 
 Now you can pull our boilerplate repo into your repo:
-* `git pull https://github.com/1dv525/exercise-boilerplate.git`
+* `git pull https://github.com/1dv022/exercise-boilerplate.git`
 
 You are now ready to start with the exercises.
 
