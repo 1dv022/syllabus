@@ -8,8 +8,8 @@ Make sure you have watched the introductory demos and resources:
 ## Getting started
 Exercises are not mandantory and will not be corrected by the corse management. However, you will have a better chance of doing the examination assignments in the course if you first do the exercises. We higly recommend you to complete as many exercises as possible.
 
-You have a git repo on Github named "xx222yy-exercises" where xx222yy is your lnu-username. You can use this repo for the exercises in the course. Start of by cloning the repo to your computer:
-* `git clone https://github.com/1dv022/xx222yy-exercises.git`
+You have a git repo on Github named "xx222yy-exercise" (*Please Note*: "exercise" not "exercises") where xx222yy is your lnu-username. You can use this repo for the exercises in the course. Start of by cloning the repo to your computer:
+* `git clone https://github.com/1dv022/xx222yy-exercise.git`
 
 Now you can pull our boilerplate repo into your repo:
 * `git pull https://github.com/1dv022/exercise-boilerplate.git`
@@ -18,7 +18,7 @@ You are now ready to start with the exercises.
 
 ## The exercises
 
-The exercises are devided in to seperate levels, A, B and C where C is the most difficult level. You should always strive to complete at least level A and B.
+The exercises are divided into seperate levels; A, B and C where C is the most difficult level. You should always strive to complete at least level A and B.
 
 1. Add the exercise/exercises you want to work on by doing a 
  * `git subtree add --prefix={reponame} --squash {link to repo} master`. For example, to start with "tiny-tunes do": 
@@ -33,40 +33,40 @@ You should have multiple terminals open at the same time. One running the `npm s
 
 ## Local IDE
 1. Start up your IDE (Visual Studio Code) and open a new project pointing to the exercise or your exercise-folder. 
-2. Start editing your site in the `src`-folder. When you save a change look terminal watching your files. You should see that the files are rebuilt. 
+2. Start editing your site in the `src`-folder. When you save a change look at the terminal watching your files. You should see that the files are rebuilt. 
 3. The webpage at [http://localhost:4000](http://localhost:4000) should be automaticly reloaded. If not, refresh the browser.
-4. When you debug your application you should to this in the browser, not in the IDE. A simple method is to write `debugger` in your js-source code where you want to stop the debugger and refresh the browser. Sourcemapping will make sure that linenumbers in the compiled-code matches your local version.
+4. When you debug your application you should do this in the browser, not in the IDE. A simple method is to write `debugger` in your js-source code where you want to stop the debugger and refresh the browser. Sourcemapping will make sure that linenumbers in the compiled-code matches your local version.
 
 ***
 
-##Tiny Tunes
+## Tiny Tunes
 Get started by watchning this recording:
 
-* [Hello World [SWE]](https://youtu.be/-BWcNBsHMzc)
+* [Hello World](https://youtu.be/6hulSdvn3Mg)
 
 |  |  |
 | ------------- | ------------- |
-|  branch | [tiny-tunes](https://github.com/1dv022/exercise/tree/tiny-tunes) |
+|  Repo | [exercise-tiny-tunes](https://github.com/CS-LNU-Learning-Objects/exercise-tiny-tunes) |
 | Level  | A  |
 | Study week  | 2-3 |
 | Lectures| <= L03 |
 | Keywords| Getting started, DOM, Events, Templates, Document Fragment|
-| Solutions | [Code](#)<br>[Recording](https://youtu.be/Ng0-sJGG9wE)|
+| Solutions | [Code](#)<br>[Recording](https://youtu.be/62MHJjvvur4)|
 
-##LNU it
+## LNU it
 |  |  |
 | ------------- | ------------- |
-|  branch | [lnu-it](https://github.com/1dv022/exercise/tree/lnu-it) |
+|  Repo | [exercise-lnu-it](https://github.com/CS-LNU-Learning-Objects/exercise-lnu-it) |
 | Level  | A  |
 | Study week  | 2-3 |
 | Lectures| <= L03 |
 | Keywords| Getting started, DOM, Style manipulation|
 | Readme | [https://github.com/1dv022/exercise/blob/lnu-it/exercise/lnu-it/README.md](https://github.com/1dv022/exercise/blob/lnu-it/exercise/lnu-it/README.md)|
 
-##BartBoard
+## BartBoard
 |  |  |
 | ------------- | ------------- |
-|  branch | [bartboard](https://github.com/1dv022/exercise/tree/bartboard) |
+|  Repo | [exercise-bartboard](https://github.com/CS-LNU-Learning-Objects/exercise-bartboard) |
 | Level  | A  |
 | Study week  | 2-3 |
 | Lectures| <= L03 |
@@ -75,30 +75,30 @@ Get started by watchning this recording:
 | Solutions | Code<br>[Extended recording](https://youtu.be/I7HJwo98EQE)|
 
 
-##Temple of DOM
+## Temple of DOM
 |  |  |
 | ------------- | ------------- |
-|  branch | [temple-of-DOM](https://github.com/1dv022/exercise/tree/temple-of-DOM) |
+|  Repo | [exercise-temple-of-dom](https://github.com/CS-LNU-Learning-Objects/exercise-temple-of-dom) |
 | Level  | B  |
 | Study week  | 2-3 |
 | Lectures| <= L03 |
 | Keywords| DOM, recursive, templates|
 | Readme | [https://github.com/1dv022/exercise/tree/temple-of-DOM/exercise/temple-of-dom](https://github.com/1dv022/exercise/tree/temple-of-DOM/exercise/temple-of-dom)|
 
-##Click Game
+## Click Game
 |  |  |
 | ------------- | ------------- |
-|  branch | [click-game](https://github.com/1dv022/exercise/tree/click-game) |
+|  Repo | [exercise-click-game](https://github.com/CS-LNU-Learning-Objects/exercise-click-game) |
 | Level  | B  |
 | Study week  | 2-3 |
 | Lectures| <= L03 |
 | Keywords| DOM, style manipulation, event, timers|
 | Readme | [https://github.com/1dv022/exercise/tree/click-game/exercise/click-game](https://github.com/1dv022/exercise/tree/click-game/exercise/click-game)|
 
-##Memory Game
+## Memory Game
 |  |  |
 | ------------- | ------------- |
-|  branch | [memory](https://github.com/1dv022/exercise/tree/memory) |
+|  Repo | [exercise-memory-game](https://github.com/CS-LNU-Learning-Objects/exercise-memory-game) |
 | Level  | B  |
 | Study week  | 2-3 |
 | Lectures| <= L03 |
