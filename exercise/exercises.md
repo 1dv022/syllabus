@@ -1,8 +1,6 @@
 ## Before you start
-Make sure you have watched the introductory demos and resources:
 
-* [Getting started (resource)](https://coursepress.lnu.se/kurs/klientbaserad-webbprogrammering/resources/getting-started/)
-* [Starting out with the exercises (YouTube)](https://youtu.be/2l8EpHhPDOk)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2l8EpHhPDOk" frameborder="0" allowfullscreen></iframe>
 
 
 ## Getting started
