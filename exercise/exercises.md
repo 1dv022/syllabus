@@ -49,31 +49,9 @@ Get started by watchning this recording:
 |  Repo | [exercise-tiny-tunes](https://github.com/CS-LNU-Learning-Objects/exercise-tiny-tunes) |
 | Level  | A  |
 | Study week  | 2-3 |
-| Lectures| <= L03 |
+| Lectures| <= L03/L04 |
 | Keywords| Getting started, DOM, Events, Templates, Document Fragment|
 | Solutions | [Code](#)<br>[Recording](https://youtu.be/62MHJjvvur4)|
-
-## LNU it
-|  |  |
-| ------------- | ------------- |
-|  Repo | [exercise-lnu-it](https://github.com/CS-LNU-Learning-Objects/exercise-lnu-it) |
-| Level  | A  |
-| Study week  | 2-3 |
-| Lectures| <= L03 |
-| Keywords| Getting started, DOM, Style manipulation|
-| Readme | [https://github.com/1dv022/exercise/blob/lnu-it/exercise/lnu-it/README.md](https://github.com/1dv022/exercise/blob/lnu-it/exercise/lnu-it/README.md)|
-
-## BartBoard
-|  |  |
-| ------------- | ------------- |
-|  Repo | [exercise-bartboard](https://github.com/CS-LNU-Learning-Objects/exercise-bartboard) |
-| Level  | A  |
-| Study week  | 2-3 |
-| Lectures| <= L03 |
-| Keywords| DOM, event, timers|
-| Readme | [Instructions](https://github.com/1dv022/exercise/blob/bartboard/exercise/bartboard/README.md)|
-| Solutions | Code<br>[Extended recording](https://youtu.be/I7HJwo98EQE)|
-
 
 ## Temple of DOM
 |  |  |
@@ -83,7 +61,30 @@ Get started by watchning this recording:
 | Study week  | 2-3 |
 | Lectures| <= L03 |
 | Keywords| DOM, recursive, templates|
-| Readme | [https://github.com/1dv022/exercise/tree/temple-of-DOM/exercise/temple-of-dom](https://github.com/1dv022/exercise/tree/temple-of-DOM/exercise/temple-of-dom)|
+| Readme | [Instructions](https://github.com/CS-LNU-Learning-Objects/exercise-temple-of-dom/blob/master/README.md)|
+
+## LNU it
+|  |  |
+| ------------- | ------------- |
+|  Repo | [exercise-lnu-it](https://github.com/CS-LNU-Learning-Objects/exercise-lnu-it) |
+| Level  | A  |
+| Study week  | 2-3 |
+| Lectures| <= L04 |
+| Keywords| Getting started, DOM, Style manipulation|
+| Readme | [Instructions](https://github.com/CS-LNU-Learning-Objects/exercise-lnu-it/blob/master/README.md)|
+
+## BartBoard
+|  |  |
+| ------------- | ------------- |
+|  Repo | [exercise-bartboard](https://github.com/CS-LNU-Learning-Objects/exercise-bartboard) |
+| Level  | A  |
+| Study week  | 2-3 |
+| Lectures| <= L04 |
+| Keywords| DOM, event, timers|
+| Readme | [Instructions](https://github.com/1dv022/exercise/blob/bartboard/exercise/bartboard/README.md)|
+| Solutions | Code<br>[Extended recording](https://youtu.be/I7HJwo98EQE)|
+
+
 
 ## Click Game
 |  |  |
@@ -93,7 +94,7 @@ Get started by watchning this recording:
 | Study week  | 2-3 |
 | Lectures| <= L03 |
 | Keywords| DOM, style manipulation, event, timers|
-| Readme | [https://github.com/1dv022/exercise/tree/click-game/exercise/click-game](https://github.com/1dv022/exercise/tree/click-game/exercise/click-game)|
+| Readme | [Instructions](https://github.com/CS-LNU-Learning-Objects/exercise-click-game/blob/master/README.md)|
 
 ## Memory Game
 |  |  |
