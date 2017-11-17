@@ -80,7 +80,7 @@ Get started by watchning this recording:
 | Lectures| <= L04 |
 | Keywords| DOM, event, timers|
 | Readme | [Instructions](https://github.com/1dv022/exercise/blob/bartboard/exercise/bartboard/README.md)|
-| Solutions | Code<br>[Extended recording](https://youtu.be/I7HJwo98EQE)|
+| Solutions | Code<br>[Recording Part 1 (DOM)](https://youtu.be/jBLruMu5pOs)|
 
 
 
