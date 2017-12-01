@@ -83,7 +83,6 @@ Get started by watchning this recording:
 | Solutions | [Code](https://github.com/CS-LNU-Learning-Objects/exercise-bartboard/tree/solution)<br>[Recording Part 1 (DOM)](https://youtu.be/jBLruMu5pOs)<br>[Recording Part 2](https://youtu.be/7fAUyQJsOLQ)|
 
 
-
 ## Click Game
 |  |  |
 | ------------- | ------------- |
@@ -93,6 +92,17 @@ Get started by watchning this recording:
 | Lectures| <= L03 |
 | Keywords| DOM, style manipulation, event, timers|
 | Readme | [Instructions](https://github.com/CS-LNU-Learning-Objects/exercise-click-game/blob/master/README.md)|
+
+## Autocomplete
+|  |  |
+| ------------- | ------------- |
+|  Repo | [exercise-autocomplete](https://github.com/CS-LNU-Learning-Objects/exercise-autocomplete) |
+| Level  | B  |
+| Study week  | 2-3 |
+| Lectures| <= L04 |
+| Keywords| DOM, style manipulation, event, async/await, fetch|
+| Readme | [Instructions](https://github.com/CS-LNU-Learning-Objects/exercise-autocomplete/blob/master/README.md)|
+| Solutions | Code<br>[Extended recording](#)|
 
 ## Memory Game
 |  |  |
