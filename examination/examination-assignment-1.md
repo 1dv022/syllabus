@@ -29,7 +29,7 @@ Make sure you have followed the "Getting started guide". If so you should alread
 4. do a `git push` to push your repo to Github
 5. do a `npm install` to create a new Jekyll site.
 6. do a `npm start` to start the web server with your site.
-7. visit (http://localhost:4000)[http://localhost:4000] to see your site
+7. visit [http://localhost:4000](http://localhost:4000) to see your site
 
 Please refer to [Boilerplate README.md](https://github.com/1dv022/jekyll-boilerplate/blob/master/README.md) for more indepth information.
 
