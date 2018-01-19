@@ -1,3 +1,7 @@
+*this guide is outdated. Please use https://codeanywhere.com/login instead.*
+
+
+
 # Alternative to Docker
 An alteranative to uisng Docker for the Jekyll assignment is to instead use a cloud based integraded development environmet. This guide is a step-by-step guide to get the first assignment up and running in [Cloud9](https://c9.io).
 
