@@ -77,7 +77,6 @@ Get started by watchning this recording:
 | Solutions | [Code](https://github.com/CS-LNU-Learning-Objects/exercise-lnu-it/tree/solution)|
 
 
-
 ## BartBoard
 |  |  |
 | ------------- | ------------- |
