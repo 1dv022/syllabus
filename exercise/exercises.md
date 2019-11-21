@@ -63,6 +63,7 @@ Get started by watchning this recording:
 | Lectures| <= L03 |
 | Keywords| DOM, recursive, templates|
 | Readme | [Instructions](https://github.com/CS-LNU-Learning-Objects/exercise-temple-of-dom/blob/master/README.md)|
+| Solutions | [Code](https://github.com/CS-LNU-Learning-Objects/exercise-temple-of-dom/tree/solution)|
 
 ## LNU it
 |  |  |
@@ -73,6 +74,9 @@ Get started by watchning this recording:
 | Lectures| <= L04 |
 | Keywords| Getting started, DOM, Style manipulation|
 | Readme | [Instructions](https://github.com/CS-LNU-Learning-Objects/exercise-lnu-it/blob/master/README.md)|
+| Solutions | [Code](https://github.com/CS-LNU-Learning-Objects/exercise-lnu-it/tree/solution)|
+
+
 
 ## BartBoard
 |  |  |
