@@ -108,7 +108,7 @@ Get started by watchning this recording:
 | Lectures| <= L04 |
 | Keywords| DOM, style manipulation, event, async/await, fetch|
 | Readme | [Instructions](https://github.com/CS-LNU-Learning-Objects/exercise-autocomplete/blob/master/README.md)|
-| Solutions | Code<br>[Extended recording](https://youtu.be/akFlBJh5J1U)|
+| Solutions | [Code](https://github.com/CS-LNU-Learning-Objects/exercise-autocomplete/tree/solution)<br>[Extended recording](https://youtu.be/akFlBJh5J1U)|
 
 ## Memory Game
 |  |  |
